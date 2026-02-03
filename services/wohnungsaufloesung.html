@@ -3,87 +3,142 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Wohnungsauflösung</title>
-    <meta
-      name="description"
-      content="Zuverlässiger Hausmeisterservice: Reparaturen, Montagearbeiten, Malerarbeiten und mehr."
-    />
 
     <link rel="stylesheet" href="../css/style.css" />
   </head>
+
   <body>
+    <!-- NAV -->
     <nav class="nav">
       <div class="nav-container">
         <a href="../index.html" class="logo">Haus & Garten</a>
 
         <button class="burger" id="burger" aria-label="Menü öffnen">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
 
         <ul class="nav-links" id="navLinks">
-          <li><a href="../index.html#leistungen">Leistungen</a></li>
+          <li>
+            <a href="../index.html#leistungen" class="active">Leistungen</a>
+          </li>
           <li><a href="../index.html#ueber-mich">Über uns</a></li>
           <li><a href="../index.html#kontakt">Kontakt</a></li>
         </ul>
       </div>
     </nav>
 
-    <section class="service-detail">
-      <div class="container">
+    <!-- HERO -->
+    <header class="hero hero-wohnungsaufloesung">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content container">
         <h1>Wohnungsauflösung</h1>
-
         <p>
-          Unser Hausmeisterservice bietet zuverlässige Unterstützung rund um Ihr
-          Objekt. Wir kümmern uns um Reparaturen, Instandhaltung und saubere
-          Ausführung.
+          Diskrete, schnelle und zuverlässige Wohnungsauflösungen inklusive
+          Entsorgung und Endreinigung.
         </p>
-
-        <ul>
-          <li>Kleine Reparaturen</li>
-          <li>Malerarbeiten & Tapezieren</li>
-          <li>Montage von Lampen & Leuchten</li>
-          <li>
-            Anschluss von Haushaltsgeräten
-            <small>(kein Elektro- oder Sanitärmeisterbetrieb)</small>
-          </li>
-        </ul>
-
-        <a href="../index.html#kontakt" class="btn"> Jetzt anfragen </a>
+        <a href="#kontakt" class="btn">Kontakt aufnehmen</a>
       </div>
-    </section>
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-col">
-          <h3>Haus & Garten Service</h3>
-          <p>Zuverlässige Hilfe rund um Haus & Garten</p>
-        </div>
+    </header>
 
-        <div class="footer-col">
-          <h4>Navigation</h4>
-          <ul>
-            <li><a href="../index.html#leistungen">Leistungen</a></li>
-            <li><a href="../index.html#ueber-mich">Über uns</a></li>
-            <li><a href="../index.html#kontakt">Kontakt</a></li>
-            <li><a href="../impressum.html">Impressum</a></li>
-          </ul>
+    <main>
+      <!-- QUICK LINKS -->
+      <section class="service-links">
+        <div class="container service-links-row">
+          <a href="#aufloesung" class="service-link-card">
+            Wohnungsauflösung
+          </a>
+          <a href="#entsorgung" class="service-link-card"> Entsorgung </a>
+          <a href="#endreinigung" class="service-link-card"> Endreinigung </a>
         </div>
+      </section>
 
-        <div class="footer-col">
-          <h4>Kontakt</h4>
-          <p>📞 <a href="tel:+491234567890">+49 123 4567890</a></p>
-          <p>💬 <a href="https://wa.me/491234567890">WhatsApp</a></p>
-          <p>✉️ <a href="mailto:info@beispiel.de">info@beispiel.de</a></p>
-        </div>
-      </div>
+      <!-- SERVICE SECTIONS -->
+      <section class="services-wrapper">
+        <!-- Wohnungsauflösung -->
+        <section class="service-bg aufloesung" id="aufloesung">
+          <div class="service-overlay"></div>
 
-      <div class="footer-bottom">
-        <p>© 2026 Haus & Garten Service</p>
+          <div class="service-content container">
+            <h2>Komplette Wohnungsauflösung</h2>
+            <p class="service-short">
+              Vollständige Auflösung von Wohnungen und Häusern aus einer Hand.
+            </p>
+
+            <div class="service-actions">
+              <a href="#kontakt" class="btn">Kontakt aufnehmen</a>
+              <button class="toggle-btn">Mehr erfahren</button>
+            </div>
+
+            <div class="service-more">
+              <p>
+                Wir übernehmen komplette Wohnungsauflösungen inklusive Keller,
+                Dachboden und Garage. Diskret, zuverlässig und termingerecht –
+                ideal bei Umzug, Nachlass oder Haushaltsauflösung.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Entsorgung -->
+        <section class="service-bg entsorgung" id="entsorgung">
+          <div class="service-overlay"></div>
+
+          <div class="service-content container">
+            <h2>Entsorgung</h2>
+            <p class="service-short">
+              Fachgerechte und umweltbewusste Entsorgung.
+            </p>
+
+            <div class="service-actions">
+              <a href="#kontakt" class="btn">Kontakt aufnehmen</a>
+              <button class="toggle-btn">Mehr erfahren</button>
+            </div>
+
+            <div class="service-more">
+              <p>
+                Entsorgung von Möbeln, Hausrat und Elektrogeräten gemäß
+                gesetzlichen Vorgaben. Umweltgerecht, sauber und zuverlässig.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Endreinigung -->
+        <section class="service-bg endreinigung" id="endreinigung">
+          <div class="service-overlay"></div>
+
+          <div class="service-content container">
+            <h2>Endreinigung</h2>
+            <p class="service-short">
+              Saubere Übergabe an Vermieter oder Käufer.
+            </p>
+
+            <div class="service-actions">
+              <a href="#kontakt" class="btn">Kontakt aufnehmen</a>
+              <button class="toggle-btn">Mehr erfahren</button>
+            </div>
+
+            <div class="service-more">
+              <p>
+                Besenreine oder gründliche Endreinigung nach Wunsch – inklusive
+                Böden, Fenster und Sanitärbereiche.
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="kontakt">
+      <div class="container">
+        <p>© Haus & Garten Service</p>
       </div>
     </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/service-toggle.js"></script>
   </body>
-  <script src="../js/main.js"></script>
 </html>

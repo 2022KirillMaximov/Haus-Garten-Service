@@ -3,86 +3,139 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Umzugshilfe & Möbelmontage</title>
-    <meta
-      name="description"
-      content="Zuverlässiger Hausmeisterservice: Reparaturen, Montagearbeiten, Malerarbeiten und mehr."
-    />
+    <title>Umzug & Möbelmontage</title>
 
     <link rel="stylesheet" href="../css/style.css" />
   </head>
+
   <body>
+    <!-- NAV -->
     <nav class="nav">
       <div class="nav-container">
         <a href="../index.html" class="logo">Haus & Garten</a>
 
         <button class="burger" id="burger" aria-label="Menü öffnen">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
 
         <ul class="nav-links" id="navLinks">
-          <li><a href="../index.html#leistungen">Leistungen</a></li>
+          <li>
+            <a href="../index.html#leistungen" class="active">Leistungen</a>
+          </li>
           <li><a href="../index.html#ueber-mich">Über uns</a></li>
           <li><a href="../index.html#kontakt">Kontakt</a></li>
         </ul>
       </div>
     </nav>
-    <section class="service-detail">
-      <div class="container">
-        <h1>Umzugshilfe & Möbelmontage</h1>
 
+    <!-- HERO -->
+    <header class="hero hero-umzug">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content container">
+        <h1>Umzug & Möbelmontage</h1>
         <p>
-          Unser Hausmeisterservice bietet zuverlässige Unterstützung rund um Ihr
-          Objekt. Wir kümmern uns um Reparaturen, Instandhaltung und saubere
-          Ausführung.
+          Zuverlässige Unterstützung bei Umzügen, Möbelmontage und Transport –
+          flexibel und sorgfältig.
         </p>
-
-        <ul>
-          <li>Kleine Reparaturen</li>
-          <li>Malerarbeiten & Tapezieren</li>
-          <li>Montage von Lampen & Leuchten</li>
-          <li>
-            Anschluss von Haushaltsgeräten
-            <small>(kein Elektro- oder Sanitärmeisterbetrieb)</small>
-          </li>
-        </ul>
-
-        <a href="../index.html#kontakt" class="btn"> Jetzt anfragen </a>
+        <a href="#kontakt" class="btn">Kontakt aufnehmen</a>
       </div>
-    </section>
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-col">
-          <h3>Haus & Garten Service</h3>
-          <p>Zuverlässige Hilfe rund um Haus & Garten</p>
-        </div>
+    </header>
 
-        <div class="footer-col">
-          <h4>Navigation</h4>
-          <ul>
-            <li><a href="../index.html#leistungen">Leistungen</a></li>
-            <li><a href="../index.html#ueber-mich">Über uns</a></li>
-            <li><a href="../index.html#kontakt">Kontakt</a></li>
-            <li><a href="../impressum.html">Impressum</a></li>
-          </ul>
+    <main>
+      <!-- QUICK LINKS -->
+      <section class="service-links">
+        <div class="container service-links-row">
+          <a href="#umzugshilfe" class="service-link-card">Umzugshilfe</a>
+          <a href="#moebelmontage" class="service-link-card">Möbelmontage</a>
+          <a href="#transporthilfe" class="service-link-card">Transporthilfe</a>
         </div>
+      </section>
 
-        <div class="footer-col">
-          <h4>Kontakt</h4>
-          <p>📞 <a href="tel:+491234567890">+49 123 4567890</a></p>
-          <p>💬 <a href="https://wa.me/491234567890">WhatsApp</a></p>
-          <p>✉️ <a href="mailto:info@beispiel.de">info@beispiel.de</a></p>
-        </div>
-      </div>
+      <!-- SERVICE SECTIONS -->
+      <section class="services-wrapper">
+        <!-- Umzugshilfe -->
+        <section class="service-bg umzugshilfe" id="umzugshilfe">
+          <div class="service-overlay"></div>
 
-      <div class="footer-bottom">
-        <p>© 2026 Haus & Garten Service</p>
+          <div class="service-content container">
+            <h2>Umzugshilfe</h2>
+            <p class="service-short">
+              Praktische Hilfe beim Tragen, Be- und Entladen.
+            </p>
+
+            <div class="service-actions">
+              <a href="#kontakt" class="btn">Kontakt aufnehmen</a>
+              <button class="toggle-btn">Mehr erfahren</button>
+            </div>
+
+            <div class="service-more">
+              <p>
+                Unterstützung bei privaten und kleineren Umzügen. Ich helfe beim
+                Tragen von Möbeln und Kartons sowie beim Be- und Entladen –
+                flexibel und zuverlässig.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Möbelmontage -->
+        <section class="service-bg moebelmontage" id="moebelmontage">
+          <div class="service-overlay"></div>
+
+          <div class="service-content container">
+            <h2>Möbelmontage</h2>
+            <p class="service-short">
+              Auf- und Abbau von Möbeln – sauber und fachgerecht.
+            </p>
+
+            <div class="service-actions">
+              <a href="#kontakt" class="btn">Kontakt aufnehmen</a>
+              <button class="toggle-btn">Mehr erfahren</button>
+            </div>
+
+            <div class="service-more">
+              <p>
+                Montage und Demontage von Schränken, Betten, Regalen und
+                weiteren Möbelstücken. Küchenmöbel ohne Anschlüsse.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Transporthilfe -->
+        <section class="service-bg transporthilfe" id="transporthilfe">
+          <div class="service-overlay"></div>
+
+          <div class="service-content container">
+            <h2>Transporthilfe</h2>
+            <p class="service-short">
+              Hilfe beim Transport von Möbeln und Gegenständen.
+            </p>
+
+            <div class="service-actions">
+              <a href="#kontakt" class="btn">Kontakt aufnehmen</a>
+              <button class="toggle-btn">Mehr erfahren</button>
+            </div>
+
+            <div class="service-more">
+              <p>
+                Unterstützung bei kurzen Transportwegen, Tragehilfe nach
+                Absprache und flexible Terminvereinbarung.
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer" id="kontakt">
+      <div class="container">
+        <p>© Haus & Garten Service</p>
       </div>
     </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/service-toggle.js"></script>
   </body>
-  <script src="../js/main.js"></script>
 </html>

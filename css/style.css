@@ -448,3 +448,461 @@ ul {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+/* === Service Page === */
+.service-hero {
+  background: #166534;
+  color: #ffffff;
+  padding: 3rem 1.2rem;
+  text-align: center;
+}
+
+.service-links-row {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+}
+
+.service-link-card {
+  min-width: 200px;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  text-decoration: none;
+  color: #166534;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.service-block {
+  background: #ffffff;
+  margin: 2rem 1.2rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.service-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.btn.small {
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #166534;
+  font-weight: 600;
+  cursor: pointer;
+}
+/* 
+.service-more {
+  display: none;
+  margin-top: 1rem;
+  color: #374151;
+} */
+
+.service-block.open .service-more {
+  display: block;
+}
+.nav-links a.active {
+  color: #166534;
+  position: relative;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: #22c55e;
+  border-radius: 2px;
+}
+
+/* === Image Service Cards === */
+.service-card {
+  position: relative;
+  display: block;
+  height: 260px;
+  border-radius: 1rem;
+  overflow: hidden;
+  text-decoration: none;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease;
+}
+
+/* Overlay */
+.service-card-content {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: background 0.3s ease;
+}
+
+.service-card h3 {
+  margin-bottom: 0.3rem;
+}
+
+.service-card p {
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover */
+.service-card:hover .service-card-bg {
+  transform: scale(1.05);
+}
+
+.service-card:hover p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile: текст всегда виден */
+@media (max-width: 767px) {
+  .service-card p {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* === HERO === */
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.95;
+}
+.hero {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* === HERO IMAGES === */
+.hero-index {
+  background-image: url("../img/haus-mit-garten.jpg");
+}
+.hero-hausmeister {
+  background-image: url("../img/hero-hausmeister.jpg");
+}
+.hero-gartenpflege {
+  background-image: url("../img/hero-gartenpflege.webp");
+}
+
+.hero-wohnungsaufloesung {
+  background-image: url("../img/hero-wohnungsaufloesung.webp");
+}
+
+.hero-umzug {
+  background-image: url("../img/hero-umzug.jpg");
+}
+/* === SERVICE SLIDER === */
+.service-slider {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+  background: #000;
+}
+
+.slider-viewport {
+  height: 100%;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-caption {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.15));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+
+.slide-caption h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.slide-caption p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* === Buttons === */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  font-size: 2.5rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-btn.prev {
+  left: 1rem;
+}
+
+.slider-btn.next {
+  right: 1rem;
+}
+
+/* //////////////////////////logo/////////////// */
+
+.logo img {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+.logo {
+  display: flex;
+}
+
+./* === SERVICE BACKGROUND SECTIONS === */
+.service-bg {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.service-bg .service-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.service-content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 2rem;
+  max-width: 720px;
+}
+
+.service-bg h2 {
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+}
+
+.service-short {
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  opacity: 0.95;
+}
+.service-bg {
+  position: relative;
+}
+
+.service-bg .service-overlay {
+  z-index: 1;
+}
+
+.service-content {
+  position: relative;
+  z-index: 2;
+}
+.services-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.services-wrapper {
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .services-wrapper {
+    gap: 4rem;
+  }
+}
+
+/* Actions */
+.service-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #bbf7d0;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+/* Hidden content */
+.service-more {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.service-bg.open .service-more {
+  max-height: 300px;
+  margin-top: 1rem;
+}
+
+/* === Background images === */
+.reparaturen {
+  background-image: url("../img/services/reparaturen.jpg");
+  background-position: center top;
+}
+
+.malerarbeiten {
+  background-image: url("../img/services/malerarbeiten.jpg");
+  background-position: 70% center;
+}
+
+.montage {
+  background-image: url("../img/services/montage.webp");
+}
+
+.geraete {
+  background-image: url("../img/services/haushaltsgeraete.webp");
+}
+.rasenpflege {
+  background-image: url("../img/services/rasenpflege.jpg");
+  background-position: center 75%;
+}
+
+.gartenarbeiten {
+  background-image: url("../img/services/gartenarbeiten.webp");
+  background-position: center 40%;
+}
+
+.winterdienst {
+  background-image: url("../img/services/winterdienst.jpg");
+  background-position: center bottom;
+}
+.hero-umzug {
+  background-image: url("../img/hero/umzug.jpg");
+}
+
+.umzugshilfe {
+  background-image: url("../img/services/umzugshilfe.jpg");
+}
+
+.moebelmontage {
+  background-image: url("../img/services/moebelmontage.jpg");
+}
+
+.transporthilfe {
+  background-image: url("../img/services/transporthilfe.jpg");
+}
+.hero-wohnungsaufloesung {
+  background-image: url("../img/hero-wohnungsaufloesung.webp");
+}
+
+.service-bg.aufloesung {
+  background-image: url("../img/services/aufloesung.jpg");
+  background-position: center 75%;
+}
+
+.service-bg.entsorgung {
+  background-image: url("../img/entsorgung.jpg");
+}
+
+.service-bg.endreinigung {
+  background-image: url("../img/endreinigung.jpg");
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .service-bg {
+    min-height: 60vh;
+  }
+
+  .service-bg h2 {
+    font-size: 1.6rem;
+  }
+}

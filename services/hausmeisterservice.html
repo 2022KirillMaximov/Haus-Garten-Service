@@ -3,24 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Hausmeisterservice | Haus & Garten Service</title>
-    <meta
-      name="description"
-      content="Zuverlässiger Hausmeisterservice: Reparaturen, Montagearbeiten, Malerarbeiten und mehr."
-    />
+    <title>Hausmeisterservice</title>
 
     <link rel="stylesheet" href="../css/style.css" />
   </head>
+
   <body>
+    <!-- NAV -->
     <nav class="nav">
       <div class="nav-container">
         <a href="../index.html" class="logo">Haus & Garten</a>
 
         <button class="burger" id="burger" aria-label="Menü öffnen">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
 
         <ul class="nav-links" id="navLinks">
@@ -31,59 +26,143 @@
       </div>
     </nav>
 
-    <section class="service-detail">
-      <div class="container">
+    <!-- HERO -->
+    <header class="hero hero-hausmeister">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content container">
         <h1>Hausmeisterservice</h1>
-
         <p>
-          Unser Hausmeisterservice bietet zuverlässige Unterstützung rund um Ihr
-          Objekt. Wir kümmern uns um Reparaturen, Instandhaltung und saubere
-          Ausführung.
+          Zuverlässige Hilfe für Reparaturen, Montagearbeiten und Instandhaltung
+          rund um Ihre Immobilie.
         </p>
-
-        <ul>
-          <li>Kleine Reparaturen</li>
-          <li>Malerarbeiten & Tapezieren</li>
-          <li>Montage von Lampen & Leuchten</li>
-          <li>
-            Anschluss von Haushaltsgeräten
-            <small>(kein Elektro- oder Sanitärmeisterbetrieb)</small>
-          </li>
-        </ul>
-
-        <a href="../index.html#kontakt" class="btn"> Jetzt anfragen </a>
+        <a href="#kontakt" class="btn">Kontakt aufnehmen</a>
       </div>
-    </section>
-    <!-- Footer -->
+    </header>
+
+    <main>
+      <!-- QUICK LINKS -->
+      <section class="service-links">
+        <div class="container service-links-row">
+          <a href="#reparaturen" class="service-link-card"
+            >Kleine Reparaturen</a
+          >
+          <a href="#malerarbeiten" class="service-link-card">Malerarbeiten</a>
+          <a href="#lampen" class="service-link-card">Lampen & Leuchten</a>
+          <a href="#geraete" class="service-link-card">Haushaltsgeräte</a>
+        </div>
+      </section>
+
+      <!-- SERVICE SECTIONS -->
+      <section class="services-wrapper">
+        <section class="service-bg reparaturen" id="reparaturen">
+          <div class="service-overlay"></div>
+
+          <div class="service-content container">
+            <h2>Kleine Reparaturen</h2>
+            <p class="service-short">
+              Schnelle und zuverlässige Hilfe bei kleineren Reparaturen im
+              Haushalt.
+            </p>
+
+            <div class="service-actions">
+              <a href="#kontakt" class="btn">Kontakt aufnehmen</a>
+              <button class="toggle-btn">Mehr erfahren</button>
+            </div>
+
+            <div class="service-more">
+              <p>
+                Ich übernehme kleinere Reparaturen im Innen- und Außenbereich –
+                von defekten Türgriffen bis hin zu lockeren Regalen oder
+                beschädigten Silikonfugen. Sauber, pünktlich und zuverlässig.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="service-bg malerarbeiten" id="malerarbeiten">
+          <div class="service-overlay"></div>
+
+          <div class="service-content container">
+            <h2>Malerarbeiten & Tapezieren</h2>
+            <p class="service-short">
+              Frische Farben für Ihre Räume – sauber und professionell
+              umgesetzt.
+            </p>
+
+            <div class="service-actions">
+              <a href="#kontakt" class="btn">Kontakt aufnehmen</a>
+              <button class="toggle-btn">Mehr erfahren</button>
+            </div>
+
+            <div class="service-more">
+              <p>
+                Durchführung von Maler- und Tapezierarbeiten in Wohnungen,
+                Häusern und Büros. Vorbereitung der Flächen, sauberes Arbeiten
+                und ein hochwertiges Endergebnis.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="service-bg montage" id="montage">
+          <div class="service-overlay"></div>
+
+          <div class="service-content container">
+            <h2>Montage von Lampen & Leuchten</h2>
+            <p class="service-short">
+              Fachgerechte Montage von Lampen, Leuchten und Deckenbeleuchtung.
+            </p>
+
+            <div class="service-actions">
+              <a href="#kontakt" class="btn">Kontakt aufnehmen</a>
+              <button class="toggle-btn">Mehr erfahren</button>
+            </div>
+
+            <div class="service-more">
+              <p>
+                Montage und Austausch von Decken- und Wandlampen sowie Leuchten.
+                Kein Elektro-Meisterbetrieb – ausschließlich einfache
+                Montagearbeiten.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="service-bg geraete" id="geraete">
+          <div class="service-overlay"></div>
+
+          <div class="service-content container">
+            <h2>Anschluss von Haushaltsgeräten</h2>
+            <p class="service-short">
+              Anschluss und Inbetriebnahme von Haushaltsgeräten.
+              <small>(kein Elektro- oder Sanitärmeisterbetrieb)</small>
+            </p>
+
+            <div class="service-actions">
+              <a href="#kontakt" class="btn">Kontakt aufnehmen</a>
+              <button class="toggle-btn">Mehr erfahren</button>
+            </div>
+
+            <div class="service-more">
+              <p>
+                Anschluss von Waschmaschinen, Geschirrspülern und anderen
+                Haushaltsgeräten gemäß Herstellerangaben. Kein Eingriff in
+                Elektro- oder Sanitärinstallationen.
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
     <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-col">
-          <h3>Haus & Garten Service</h3>
-          <p>Zuverlässige Hilfe rund um Haus & Garten</p>
-        </div>
-
-        <div class="footer-col">
-          <h4>Navigation</h4>
-          <ul>
-            <li><a href="../index.html#leistungen">Leistungen</a></li>
-            <li><a href="../index.html#ueber-mich">Über uns</a></li>
-            <li><a href="../index.html#kontakt">Kontakt</a></li>
-            <li><a href="../impressum.html">Impressum</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Kontakt</h4>
-          <p>📞 <a href="tel:+491234567890">+49 123 4567890</a></p>
-          <p>💬 <a href="https://wa.me/491234567890">WhatsApp</a></p>
-          <p>✉️ <a href="mailto:info@beispiel.de">info@beispiel.de</a></p>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2026 Haus & Garten Service</p>
+      <div class="container">
+        <p>© Haus & Garten Service</p>
       </div>
     </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/service-toggle.js"></script>
   </body>
-  <script src="../js/main.js"></script>
 </html>
