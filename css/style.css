@@ -857,7 +857,7 @@ ul {
 
 .gartenarbeiten {
   background-image: url("../img/services/gartenarbeiten.webp");
-  background-position: center 40%;
+  background-position: center 50%;
 }
 
 .winterdienst {
@@ -895,7 +895,35 @@ ul {
 .service-bg.endreinigung {
   background-image: url("../img/endreinigung.jpg");
 }
+.hecken-schnitt {
+  background-image: url("../img/services/hecken-schnitt.webp");
+  background-position: center 45%;
+}
+.baumpflege {
+  background-image: url("../img/services/baumpflege.jpg");
+  background-position: center 50%;
+}
 
+.bewaesserung {
+  background-image: url("../img/services/bewaesserung.jpg");
+  background-position: center 75%;
+}
+.gartenreinigung {
+  background-image: url("../img/services/gartenreinigung.jpg");
+  background-position: right 60%;
+}
+.pflasterarbeiten {
+  background-image: url("../img/services/pflasterarbeiten.jpg");
+  background-position: center 75%;
+}
+.gartenpflege {
+  background-image: url("../img/services/gartenpflege.jpg");
+  background-position: center 75%;
+}
+.wartung {
+  background-image: url("../img/services/wartung.webp");
+  background-position: center 30%;
+}
 /* Mobile tweaks */
 @media (max-width: 768px) {
   .service-bg {
