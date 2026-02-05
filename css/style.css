@@ -1,7 +1,7 @@
+/* === 1. Reset / Base === */
 html {
   scroll-behavior: smooth;
 }
-/* === Reset / Base === */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,526 +15,206 @@ body {
   background-color: #f9fafb;
 }
 
-/* === Utilities === */
-.container {
-  padding: 1.2rem;
-}
-
 h1,
 h2,
 h3 {
   margin-bottom: 0.6rem;
 }
-
 ul {
   padding-left: 1.2rem;
 }
 
-/* === Header === */
-.header {
-  background: #166534;
-  color: #ffffff;
-  text-align: center;
-  padding: 2.5rem 1.2rem;
+/* === 2. Variables === */
+:root {
+  --green-900: #052e16;
+  --green-800: #166534;
+  --green-500: #22c55e;
+  --green-200: #a7f3d0;
+  --gray-100: #f9fafb;
+  --gray-200: #e5e7eb;
 }
 
-.subtitle {
-  margin: 0.8rem 0 1.2rem;
-  font-size: 1rem;
-  opacity: 0.9;
+/* === 3. Utilities === */
+.container {
+  padding: 1.2rem;
 }
-
 .btn {
   display: inline-block;
-  background: #22c55e;
-  color: #052e16;
+  background: var(--green-500);
+  color: var(--green-900);
   padding: 0.7rem 1.2rem;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
 }
-
-/* === Services === */
-.services {
-  padding: 2rem 0;
-}
-
-.card {
-  background: #ffffff;
-  border-radius: 1rem;
-  padding: 1.2rem;
-  margin-bottom: 1.2rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-}
-
-/* === Contact === */
-.contact {
-  background: #ecfdf5;
-  padding: 2rem 0;
-}
-
-.contact a {
-  color: #166534;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-/* === Tablet &*
-
-
-/* === Navigation === */
-.nav {
-  background: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.8rem 1.2rem;
-}
-
-.logo {
-  font-weight: 700;
-  color: #166534;
-}
-
-/* Burger */
-.burger {
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: block; /* по умолчанию видно на мобильном */
-}
-
-.burger span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: #166534;
-  margin: 5px 0;
-}
-
-/* Mobile menu */
-.nav-links {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: #ffffff;
-  list-style: none;
-  display: none; /* по умолчанию скрыто на мобильном */
-  flex-direction: column;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.nav-links li {
-  border-top: 1px solid #f3f4f6;
-}
-
-.nav-links a {
-  display: block;
-  padding: 1rem;
-  text-decoration: none;
-  color: #166534;
-  font-weight: 600;
-}
-
-/* Active для мобильного */
-.nav-links.active {
-  display: flex;
-}
-
-/* Desktop */
-@media (min-width: 768px) {
-  .burger {
-    display: none; /* бургер скрыт на десктопе */
-  }
-
-  .nav-links {
-    position: static;
-    display: flex !important; /* всегда видно на десктопе */
-    flex-direction: row;
-    gap: 1.5rem;
-    border: none;
-  }
-
-  .nav-links li {
-    border: none;
-  }
-}
-
-/* === About === */
-.about {
-  padding: 2.5rem 0;
-  background: #ffffff;
-}
-
-/* === Contact === */
-.contact {
-  padding: 2.5rem 0;
-  background: #ecfdf5;
-}
-
-.contact a {
-  color: #166534;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.hint {
-  margin-top: 1rem;
-  color: #6b7280;
-}
-@media (min-width: 768px) {
-  .services .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .services h2 {
-    grid-column: 1 / -1;
-  }
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-}
-
-.card-link {
-  margin-top: 1rem;
-  color: #166534;
-  font-weight: 600;
-  text-decoration: none;
-  align-self: flex-start;
-}
-
-.card-link:hover {
-  text-decoration: underline;
-}
-
-.service-detail {
-  padding: 3rem 0;
-  background: #ffffff;
-}
-
-.service-detail ul {
-  margin: 1.5rem 0;
-}
-
-/* === Service Slider === */
-.service-slider {
-  padding: 0; /* важно */
-  height: 75vh;
-  overflow: hidden;
-  background: #f9fafb;
-}
-
-.slider-container {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  padding: 0 1.2rem;
-  scroll-snap-type: x mandatory;
-}
-
-.slide {
-  flex: 0 0 100vw;
-  width: 100vw;
-  height: 100%;
-  background: #ffffff;
-  border-radius: 1rem;
-  padding: 1.2rem;
-  text-decoration: none;
-  color: #1f2937;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  scroll-snap-align: start;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.slide h3 {
-  margin-bottom: 0.4rem;
-  color: #166534;
-}
-
-.slide p {
-  font-size: 0.9rem;
-  color: #6b7280;
-}
-
-.slide:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-}
-
-/* Desktop */
-@media (min-width: 768px) {
-  .slider-container {
-    justify-content: center;
-    overflow: visible;
-  }
-
-  .slide {
-    min-width: 200px;
-  }
-}
-
-/* FORCE service slider layout */
-.service-slider {
-  width: 100%;
-}
-
-.service-slider .slider-container {
-  display: flex !important;
-  flex-direction: row !important;
-  gap: 1rem;
-  overflow-x: auto;
-}
-
-.service-slider .slide {
-  display: block;
-  min-width: 240px;
-  flex-shrink: 0;
-}
-
-/* === HERO SERVICE SLIDER === */
-.service-slider {
-  position: relative;
-  height: 75vh; /* высота по вертикали */
-  min-height: 420px;
-  overflow: hidden;
-  background: #f9fafb;
-}
-
-.slider-track {
-  display: flex;
-  height: 100%;
-  transition: transform 0.4s ease;
-}
-
-.slide {
-  min-width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: #ffffff;
-  background: linear-gradient(135deg, #166534, #22c55e);
-}
-
-.slide-content {
-  text-align: center;
-  padding: 2rem;
-  max-width: 600px;
-}
-
-.slide h2 {
-  font-size: 2rem;
-  margin-bottom: 0.8rem;
-}
-
-.slide p {
-  font-size: 1.1rem;
-  opacity: 0.95;
-}
-
-/* === ARROWS === */
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.85);
-  border: none;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  font-size: 1.8rem;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.slider-btn.prev {
-  left: 1rem;
-}
-
-.slider-btn.next {
-  right: 1rem;
-}
-
-.slider-btn:hover {
-  background: #ffffff;
-}
-
-/* Desktop */
-@media (min-width: 768px) {
-  .service-slider {
-    height: 65vh;
-  }
-
-  .slide h2 {
-    font-size: 2.4rem;
-  }
-}
-
-/* === Footer === */
-.footer {
-  background: #052e16;
-  color: #ecfdf5;
-  padding: 2.5rem 1.2rem 1rem;
-}
-
-.footer-container {
-  display: grid;
-  gap: 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.footer h3,
-.footer h4 {
-  margin-bottom: 0.6rem;
-  color: #ffffff;
-}
-
-.footer p {
-  font-size: 0.95rem;
-  opacity: 0.9;
-}
-
-.footer ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer li {
-  margin-bottom: 0.4rem;
-}
-
-.footer a {
-  color: #a7f3d0;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
-.footer-bottom {
-  margin-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  padding-top: 1rem;
-  text-align: center;
-  font-size: 0.85rem;
-  opacity: 0.8;
-}
-
-/* Desktop */
-@media (min-width: 768px) {
-  .footer-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-/* === Service Page === */
-.service-hero {
-  background: #166534;
-  color: #ffffff;
-  padding: 3rem 1.2rem;
-  text-align: center;
-}
-
-.service-links-row {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-}
-
-.service-link-card {
-  min-width: 200px;
-  padding: 1rem;
-  background: #ffffff;
-  border-radius: 1rem;
-  text-decoration: none;
-  color: #166534;
-  font-weight: 600;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
-.service-block {
-  background: #ffffff;
-  margin: 2rem 1.2rem;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-}
-
-.service-actions {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
-
 .btn.small {
   padding: 0.4rem 1rem;
   font-size: 0.9rem;
 }
 
-.toggle-btn {
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+.card-link {
+  margin-top: 1rem;
+  color: var(--green-800);
+  font-weight: 600;
+  text-decoration: none;
+}
+.card-link:hover {
+  text-decoration: underline;
+}
+
+/* === 4. Navigation === */
+.nav {
+  background: #fff;
+  border-bottom: 1px solid var(--gray-200);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+.logo {
+  display: flex;
+  align-items: center; /* выравнивание по вертикали */
+  gap: 0.8rem; /* расстояние между картинкой и текстом */
+  font-family: "Montserrat", sans-serif; /* современный чистый шрифт */
+  font-weight: 700; /* жирность */
+  font-size: 1.4rem; /* размер текста */
+  color: var(--green-900); /* можно цвет оставить как основной */
+  text-decoration: none; /* убираем подчеркивание */
+}
+.logo img {
+  height: 100px;
+}
+
+.burger {
   background: none;
   border: none;
-  color: #166534;
-  font-weight: 600;
   cursor: pointer;
-}
-/* 
-.service-more {
-  display: none;
-  margin-top: 1rem;
-  color: #374151;
-} */
-
-.service-block.open .service-more {
   display: block;
 }
-.nav-links a.active {
-  color: #166534;
-  position: relative;
+.burger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--green-800);
+  margin: 5px 0;
 }
 
+.nav-links {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.nav-links.active {
+  display: flex;
+}
+.nav-links a {
+  padding: 1rem;
+  display: block;
+  text-decoration: none;
+  color: var(--green-800);
+  font-weight: 600;
+}
 .nav-links a.active::after {
   content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 100%;
+  display: block;
   height: 2px;
-  background: #22c55e;
-  border-radius: 2px;
+  background: var(--green-500);
+  margin-top: 4px;
 }
 
-/* === Image Service Cards === */
-.service-card {
+@media (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+  .nav-links {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+
+/* === 5. Hero === */
+/* === HERO BASE === */
+.hero {
   position: relative;
-  display: block;
-  height: 260px;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+.hero-content {
+  position: relative;
+  max-width: 720px;
+}
+
+/* === 6. Services / Leistungen === */
+.services {
+  padding: 2rem 1.2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* заголовок сверху, карточки ниже */
+  align-items: center;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.services .container {
+  display: flex;
+  flex-direction: row; /* горизонтально */
+  gap: 2rem; /* отступ между карточками */
+  justify-content: center;
+  flex-wrap: wrap; /* чтобы на мобиле переносились */
+}
+.services > .container {
+  flex-direction: row;
+}
+.service-card {
+  width: 260px;
+  height: 220px;
   border-radius: 1rem;
   overflow: hidden;
+  position: relative;
+  color: #fff;
   text-decoration: none;
-  color: #ffffff;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .service-card-bg {
@@ -542,169 +222,193 @@ ul {
   inset: 0;
   background-size: cover;
   background-position: center;
-  transition: transform 0.4s ease;
+  transition: transform 0.4s;
 }
 
-/* Overlay */
-.service-card-content {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
-  padding: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  transition: background 0.3s ease;
-}
-
-.service-card h3 {
-  margin-bottom: 0.3rem;
-}
-
-.service-card p {
-  font-size: 0.9rem;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-/* Hover */
 .service-card:hover .service-card-bg {
   transform: scale(1.05);
 }
-
-.service-card:hover p {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Mobile: текст всегда виден */
-@media (max-width: 767px) {
-  .service-card p {
-    opacity: 1;
-    transform: none;
-  }
-}
-/* === HERO === */
-.hero {
+.service-card {
   position: relative;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  color: #ffffff;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  overflow: hidden;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s;
 }
 
-.hero-overlay {
+.service-card:hover {
+  transform: translateY(-5px); /* карточка слегка поднимается */
+}
+
+.service-card-content {
   position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.4); /* прозрачный фон под текст */
+  color: #fff;
+  transform: translateY(100%); /* текст изначально скрыт ниже */
+  transition: transform 0.4s ease, background 0.4s ease;
 }
 
-.hero-content {
+.service-card:hover .service-card-content {
+  transform: translateY(0); /* текст «выплывает» вверх */
+  background: rgba(0, 0, 0, 0.6); /* фон становится чуть темнее */
+}
+
+/* Заголовок и описание внутри карточки */
+.service-card-content h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.service-card-content p {
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+.service-card {
   position: relative;
-  z-index: 2;
-  max-width: 720px;
+  overflow: hidden;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s;
 }
 
-.hero h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-  opacity: 0.95;
-}
-.hero {
-  position: relative;
+/* Тёмный оверлей на картинке */
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(0, 0, 0, 0.3); /* лёгкий тёмный слой */
+  transition: background 0.4s ease;
   z-index: 1;
 }
 
-.hero-overlay {
+.service-card:hover::before {
+  background: rgba(0, 0, 0, 0.6); /* при hover слой темнее */
+}
+
+.service-card:hover {
+  transform: translateY(-5px); /* карточка слегка поднимается */
+}
+
+/* Текст, который «выплывает» */
+.service-card-content {
   position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  color: #fff;
+  z-index: 2; /* поверх оверлея */
+  transform: translateY(100%); /* изначально скрыт */
+  transition: transform 0.4s ease;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
+.service-card:hover .service-card-content {
+  transform: translateY(0); /* текст выплывает */
 }
 
-/* === HERO IMAGES === */
-.hero-index {
-  background-image: url("../img/haus-mit-garten.jpg");
-}
-.hero-hausmeister {
-  background-image: url("../img/hero-hausmeister.jpg");
-}
-.hero-gartenpflege {
-  background-image: url("../img/hero-gartenpflege.webp");
+/* Заголовок и описание внутри карточки */
+.service-card-content h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
 }
 
-.hero-wohnungsaufloesung {
-  background-image: url("../img/hero-wohnungsaufloesung.webp");
+.service-card-content p {
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+/* === Service card background images === */
+.service-card-bg.reparaturen {
+  background-image: url("../img/services/reparaturen.jpg");
 }
 
-.hero-umzug {
-  background-image: url("../img/hero-umzug.jpg");
+.service-card-bg.malerarbeiten {
+  background-image: url("../img/services/malerarbeiten.jpg");
 }
-/* === SERVICE SLIDER === */
+
+.service-card-bg.montage {
+  background-image: url("../img/services/montage.webp");
+}
+
+.service-card-bg.geraete {
+  background-image: url("../img/services/haushaltsgeraete.webp");
+}
+
+.service-card-bg.rasenpflege {
+  background-image: url("../img/services/rasenpflege.jpg");
+}
+
+.service-card-bg.gartenarbeiten {
+  background-image: url("../img/services/gartenarbeiten.webp");
+}
+
+.service-card-bg.winterdienst {
+  background-image: url("../img/services/winterdienst.jpg");
+}
+
+.service-card-bg.umzugshilfe {
+  background-image: url("../img/services/umzugshilfe.jpg");
+}
+/* === Slider === */ /* === Slider container === */
 .service-slider {
   position: relative;
-  height: 90vh;
+  width: 100vw; /* на всю ширину экрана */
+  height: 400px; /* высота слайдера, можно менять */
   overflow: hidden;
-  background: #000;
+  margin: 2rem 0;
 }
 
+/* === Viewport === */
 .slider-viewport {
+  width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
+/* === Track (для перелистывания) === */
 .slider-track {
   display: flex;
+  transition: transform 0.5s ease-in-out;
   height: 100%;
-  transition: transform 0.5s ease;
 }
 
+/* === Slide === */
 .slide {
-  min-width: 100%;
-  height: 100%;
-  position: relative;
-  text-decoration: none;
+  position: relative; /* важно для абсолютного позиционирования оверлея */
+  min-width: 100vw;
+  height: 400px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 2rem;
   color: #fff;
 }
 
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.slide-overlay {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(0, 0, 0, 0.3); /* лёгкое затемнение, можно менять 0.2–0.5 */
+  z-index: 1; /* чтобы был под текстом */
 }
 
 .slide-caption {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.15));
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 2rem;
+  position: relative;
+  z-index: 2; /* текст поверх оверлея */
+  background: rgba(0, 0, 0, 0.4); /* если нужно дополнительный фон под текст */
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  max-width: 400px;
 }
 
-.slide-caption h3 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.slide-caption p {
-  font-size: 1.1rem;
-  opacity: 0.9;
+/* === Caption === */
+.slide-caption {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  max-width: 400px;
 }
 
 /* === Buttons === */
@@ -712,225 +416,530 @@ ul {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
   border: none;
-  font-size: 2.5rem;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
+  border-radius: 0.5rem;
   z-index: 10;
 }
 
 .slider-btn.prev {
   left: 1rem;
 }
-
 .slider-btn.next {
   right: 1rem;
 }
 
-/* //////////////////////////logo/////////////// */
-
-.logo img {
-  height: 60px;
-  width: auto;
-  display: block;
-}
-.logo {
-  display: flex;
-}
-
-./* === SERVICE BACKGROUND SECTIONS === */
+/* === 7. Service Background Sections === */
+/* === Service Background Sections === */
 .service-bg {
   position: relative;
-  min-height: 70vh;
+  width: 100%; /* на всю ширину экрана */
+  min-height: 30vh; /* исходная высота */
   display: flex;
-  align-items: flex-end;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #ffffff;
-  margin-bottom: 2rem;
+  flex-direction: column; /* контент сверху вниз */
+  justify-content: flex-end;
+  color: #fff;
+  overflow: hidden;
+  margin-bottom: 2rem; /* расстояние между секциями */
+  transition: min-height 0.4s ease;
 }
 
-.service-bg .service-overlay {
+.service-bg.open {
+  min-height: 70vh; /* высота при раскрытии */
+}
+
+/* Оверлей для затемнения фона */
+.service-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.55);
-}
-
-.service-content {
-  position: relative;
-  z-index: 2;
-  padding-bottom: 2rem;
-  max-width: 720px;
-}
-
-.service-bg h2 {
-  font-size: 2rem;
-  margin-bottom: 0.6rem;
-}
-
-.service-short {
-  font-size: 1.05rem;
-  margin-bottom: 1.2rem;
-  opacity: 0.95;
-}
-.service-bg {
-  position: relative;
-}
-
-.service-bg .service-overlay {
   z-index: 1;
 }
 
+/* Контейнер с контентом внутри секции */
 .service-content {
   position: relative;
-  z-index: 2;
-}
-.services-wrapper {
+  max-width: 720px; /* ограничение ширины текста */
+  width: 90%; /* адаптивная ширина под экран */
+  margin: 0 auto; /* центрирование по горизонтали */
+  padding: 2rem 1rem; /* внутренние отступы */
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-}
-.services-wrapper {
-  gap: 2rem;
+  gap: 1rem; /* расстояние между h2, p, кнопками */
+  z-index: 2; /* поверх оверлея */
 }
 
-@media (min-width: 768px) {
-  .services-wrapper {
-    gap: 4rem;
-  }
-}
-
-/* Actions */
-.service-actions {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.toggle-btn {
-  background: none;
-  border: none;
-  color: #bbf7d0;
-  font-weight: 600;
-  cursor: pointer;
-  font-size: 0.95rem;
-}
-
-/* Hidden content */
+/* Скрытый блок с дополнительной информацией */
 .service-more {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease;
+  transition: max-height 0.4s ease, margin-top 0.4s ease;
 }
 
 .service-bg.open .service-more {
   max-height: 300px;
+  margin-top: 1rem; /* расстояние между основным текстом и дополнительным */
+}
+
+/* Заголовок и описание */
+.service-content h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.service-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Кнопки действий */
+.service-actions {
+  display: flex;
+  flex-wrap: wrap; /* адаптивно на маленьких экранах */
+  gap: 1rem; /* расстояние между кнопками */
   margin-top: 1rem;
 }
 
-/* === Background images === */
-.reparaturen {
-  background-image: url("../img/services/reparaturen.jpg");
-  background-position: center top;
+/* Адаптивность для маленьких экранов */
+@media (max-width: 768px) {
+  .service-content {
+    width: 95%; /* почти весь экран на мобильных */
+    padding: 1.5rem;
+  }
+
+  .service-actions {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .service-bg {
+    min-height: 25vh;
+  }
+
+  .service-bg.open {
+    min-height: 60vh;
+  }
 }
 
-.malerarbeiten {
-  background-image: url("../img/services/malerarbeiten.jpg");
-  background-position: 70% center;
+/* === 8. Footer === */
+/* ===== Футер на всю ширину ===== */
+.footer {
+  background: var(--green-900);
+  color: #ecfdf5;
+  padding: 2.5rem 2rem 1rem; /* сверху, по бокам, снизу */
+  width: 100%;
 }
 
-.montage {
-  background-image: url("../img/services/montage.webp");
+/* Контейнер футера */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap; /* колонки переносятся на маленьких экранах */
+  justify-content: space-between; /* распределяем колонки по ширине */
+  gap: 2rem;
+  width: 100%;
+  max-width: none; /* убираем ограничение */
+  margin: 0; /* убираем центрирование */
 }
 
-.geraete {
-  background-image: url("../img/services/haushaltsgeraete.webp");
-}
-.rasenpflege {
-  background-image: url("../img/services/rasenpflege.jpg");
-  background-position: center 75%;
+.footer-col {
+  flex: 1; /* колонки равномерно растягиваются */
+  min-width: 200px; /* чтобы не сжимались сильно на маленьких экранах */
 }
 
-.gartenarbeiten {
-  background-image: url("../img/services/gartenarbeiten.webp");
-  background-position: center 50%;
+/* Нижняя строка футера */
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  width: 100%;
+  font-size: 0.9rem;
 }
 
-.winterdienst {
-  background-image: url("../img/services/winterdienst.jpg");
-  background-position: center bottom;
-}
-.hero-umzug {
-  background-image: url("../img/hero/umzug.jpg");
+/* ===== Медиа-запрос для маленьких экранов ===== */
+@media (max-width: 767px) {
+  .footer-container {
+    flex-direction: column; /* колонки ставим друг под другом */
+    align-items: flex-start; /* выравниваем влево */
+    gap: 1.5rem;
+  }
+
+  .footer-col {
+    min-width: 100%; /* чтобы каждая колонка занимала всю ширину */
+  }
 }
 
-.umzugshilfe {
-  background-image: url("../img/services/umzugshilfe.jpg");
+/* === 9. Modal === */
+.contact-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.contact-modal.active {
+  display: flex;
+}
+.contact-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.contact-modal-content {
+  position: relative;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 500px;
+  width: 90%;
+}
+/* === HERO BACKGROUND IMAGES (FINAL OVERRIDE) === */
+.hero.hero-index {
+  background-image: url("../img/haus-mit-garten.jpg");
 }
 
-.moebelmontage {
-  background-image: url("../img/services/moebelmontage.jpg");
+.hero.hero-hausmeister {
+  background-image: url("../img/hero-hausmeister.jpg");
 }
 
-.transporthilfe {
-  background-image: url("../img/services/transporthilfe.jpg");
+.hero.hero-gartenpflege {
+  background-image: url("../img/hero-gartenpflege.webp");
 }
-.hero-wohnungsaufloesung {
+
+.hero.hero-wohnungsaufloesung {
   background-image: url("../img/hero-wohnungsaufloesung.webp");
+}
+
+.hero.hero-umzug {
+  background-image: url("../img/heroumzug.jpg");
+}
+/* ========================= */
+/* Секция Über uns на главной */
+
+#ueber-mich {
+  text-align: center; /* центрируем только эту секцию */
+  padding: 3rem 1rem;
+  color: var(--green-800);
+  font-family: "Montserrat", sans-serif;
+}
+
+#ueber-mich h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--green-900);
+}
+
+#ueber-mich p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto 1rem auto; /* только эта секция */
+}
+/* ========================= */
+/* Секция Контакт */
+.contact {
+  padding: 3rem 1rem;
+  background: #f9fafb; /* светлый фон, можно менять */
+}
+
+.contact h2 {
+  font-size: 2rem;
+  color: var(--green-900);
+  margin-bottom: 1.5rem;
+  text-align: left; /* заголовок слева */
+}
+
+.contact p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 0.8rem;
+  text-align: left; /* текст слева */
+}
+
+.contact a {
+  color: var(--green-800);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.contact .hint {
+  font-size: 0.85rem;
+  color: #555;
+}
+/* ========================= */
+
+/* Секция Контакт */
+.contact {
+  width: 100%; /* на всю ширину экрана */
+  padding: 3rem 2rem; /* внутренние отступы */
+  background: #f9fafb;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  color: var(--green-900);
+  margin-bottom: 2rem;
+  text-align: center; /* заголовок по центру */
+}
+
+/* Контейнер для двух колонок */
+.contact-grid {
+  display: flex;
+  flex-direction: column; /* по умолчанию колонки сверху вниз на мобиле */
+  gap: 30rem;
+  width: 100%;
+  max-width: 1200px; /* ограничиваем, чтобы не растягивать слишком */
+  margin: 0 auto; /* центрируем контейнер */
+}
+
+/* Колонки */
+.contact-names,
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-info a {
+  color: var(--green-800);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.contact .hint {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Для больших экранов делаем две колонки рядом */
+@media (min-width: 768px) {
+  .contact-grid {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contact-names,
+  .contact-info {
+    flex: 1; /* делаем колонки одинаковой ширины */
+    .contact-info {
+      padding-left: 2rem; /* сдвигаем контент вправо */
+    }
+  }
+}
+@media (max-width: 800px) {
+  .contact-grid {
+    gap: 10rem;
+  }
+}
+/* === Service Link Cards === */
+.service-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.service-link-card {
+  position: relative;
+  display: block;
+  flex: 1 1 180px;
+  min-width: 150px;
+  max-width: 220px;
+  height: 100px;
+  background: #02a842;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-link-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+  z-index: 1;
+  border-radius: 0.8rem;
+}
+
+.service-link-card:hover::before {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.service-link-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.service-link-card {
+  position: relative;
+  z-index: 2;
+}
+
+/* общий стиль для всех service-bg */
+.service-bg {
+  position: relative;
+  min-height: 30vh; /* можно подрегулировать */
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+  overflow: hidden;
+  background-size: cover; /* картинка растягивается по всей секции */
+  background-position: center; /* центрирование */
+  background-repeat: no-repeat; /* чтобы не повторялась */
+}
+
+.service-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* лёгкий темный оверлей */
+}
+
+/* SERVICE BACKGROUNDS */
+.service-bg.reparaturen {
+  background-image: url("../img/services/reparaturen.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.service-bg.malerarbeiten {
+  background-image: url("../img/services/malerarbeiten.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.service-bg.gartenpflege {
+  background-image: url("../img/services/gartenpflege.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.service-bg.pflasterarbeiten {
+  background-image: url("../img/services/pflasterarbeiten.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.service-bg.wartung {
+  background-image: url("../img/services/wartung.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.service-bg.montage {
+  background-image: url("../img/services/montage.jpg");
+  background-size: cover;
+  background-position: 50% 80%;
+}
+
+.service-bg.geraete {
+  background-image: url("../img/services/haushaltsgeraete.webp");
+  background-size: cover;
+  background-position: center;
 }
 
 .service-bg.aufloesung {
   background-image: url("../img/services/aufloesung.jpg");
-  background-position: center 75%;
 }
 
-.service-bg.entsorgung {
-  background-image: url("../img/entsorgung.jpg");
+.service-bg.fassadenreinigung {
+  background-image: url("../img/services/fassadenreinigung.jpg");
 }
 
-.service-bg.endreinigung {
-  background-image: url("../img/endreinigung.jpg");
+.service-bg.dachreinigung {
+  background-image: url("../img/services/dachreinigung.jpg");
+  background-position: 50% 65%;
 }
-.hecken-schnitt {
+
+.service-bg.bodenreinigung {
+  background-image: url("../img/services/bodenreinigung.jpg");
+  background-position: 50% 60%;
+}
+
+.service-bg.treppenhausreinigung {
+  background-image: url("../img/services/treppenhausreinigung.jpeg");
+}
+
+.service-bg.fensterreinigung {
+  background-image: url("../img/services/fensterreinigung.webp");
+}
+
+.service-bg.kellerreinigung {
+  background-image: url("../img/services/kellerreinigung.jpg");
+}
+
+.service-bg.spermull {
+  background-image: url("../img/services/spermull.jpg");
+}
+
+.service-bg.dachrinnenreinigung {
+  background-image: url("../img/services/dachrinnenreinigung.jpg");
+  background-position: 50% 60%;
+}
+
+/* ГАРТЕНФЛЕНЕ  бэкграунд */
+
+.service-bg.rasenpflege {
+  background-image: url("../img/services/rasenpflege.jpg");
+  background-position: 50% 50%;
+}
+
+.service-bg.gartenarbeiten {
+  background-image: url("../img/services/gartenarbeiten.webp");
+  background-position: bottom 10%;
+}
+
+.service-bg.winterdienst {
+  background-image: url("../img/services/winterdienst.jpg");
+  background-position: bottom;
+}
+
+.service-bg.hecken-schnitt {
   background-image: url("../img/services/hecken-schnitt.webp");
-  background-position: center 45%;
 }
-.baumpflege {
+
+.service-bg.baumpflege {
   background-image: url("../img/services/baumpflege.jpg");
-  background-position: center 50%;
 }
 
-.bewaesserung {
+.service-bg.bewaesserung {
   background-image: url("../img/services/bewaesserung.jpg");
-  background-position: center 75%;
 }
-.gartenreinigung {
-  background-image: url("../img/services/gartenreinigung.jpg");
-  background-position: right 60%;
-}
-.pflasterarbeiten {
-  background-image: url("../img/services/pflasterarbeiten.jpg");
-  background-position: center 75%;
-}
-.gartenpflege {
-  background-image: url("../img/services/gartenpflege.jpg");
-  background-position: center 75%;
-}
-.wartung {
-  background-image: url("../img/services/wartung.webp");
-  background-position: center 30%;
-}
-/* Mobile tweaks */
-@media (max-width: 768px) {
-  .service-bg {
-    min-height: 60vh;
-  }
 
-  .service-bg h2 {
-    font-size: 1.6rem;
-  }
+.service-bg.gartenreinigung {
+  background-image: url("../img/services/gartenreinigung.jpg");
+}
+
+/* Umzug & Möbelmontage  бэкграунд */
+.service-bg.moebelmontage {
+  background-image: url("../img/services/moebelmontage.webp");
+}
+
+.service-bg.transporthilfe {
+  background-image: url("../img/services/transporthilfe.jpeg");
+}
+
+.service-bg.einpackservice {
+  background-image: url("../img/services/einpackservice.jpg");
 }

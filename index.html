@@ -45,8 +45,10 @@
       Zuverlässige Hilfe für Reparaturen, Montagearbeiten und Instandhaltung
       rund um Ihre Immobilie.
     </p>
-    <a href="#kontakt" class="btn">Kontakt aufnehmen</a>
-  </div>
+    <a href="javascript:void(0)" class="btn open-contact">
+ Kontakt aufnehmen
+</a>
+
 </header>
 
    
@@ -55,9 +57,10 @@
 
 
         <section class="services" id="leistungen">
-  <div class="container">
-    <h2>Leistungen</h2>
 
+    
+  <div class="container">
+  <h2>Leistungen</h2>
 <a href="services/hausmeisterservice.html" class="service-card">
   <div
     class="service-card-bg"
@@ -106,43 +109,43 @@
   </div>
 
  <!--  СЛАЙДЕР ТУТ -->
- <section class="service-slider">
+<section class="service-slider">
   <button class="slider-btn prev" aria-label="Zurück">‹</button>
 
   <div class="slider-viewport">
     <div class="slider-track">
 
-      <a href="services/hausmeisterservice.html" class="slide">
-        <img src="img/slider/hausmeisterservice.jpg" alt="Hausmeisterservice" />
+      <div class="slide" style="background-image: url('img/slider/hausmeisterservice.jpg'); background-position: center bottom;">
+          <div class="slide-overlay"></div>  <!-- <- оверлей -->
         <div class="slide-caption">
           <h3>Hausmeisterservice</h3>
           <p>Reparaturen & Instandhaltung</p>
         </div>
-      </a>
+      </div>
 
-      <a href="services/gartenpflege.html" class="slide">
-        <img src="img/slider/gartenpflege.jpg" alt="Gartenpflege" />
+      <div class="slide" style="background-image: url('img/slider/gartenpflege.jpg'); background-position: center bottom;">
+          <div class="slide-overlay"></div>  <!-- <- оверлей -->
         <div class="slide-caption">
           <h3>Gartenpflege</h3>
           <p>Rasenpflege & Winterdienst</p>
         </div>
-      </a>
+      </div>
 
-      <a href="services/wohnungsaufloesung.html" class="slide">
-        <img src="img/slider/wohnungsauflösung.webp" alt="Wohnungsauflösung" />
+      <div class="slide" style="background-image: url('img/slider/wohnungsauflosung.jpg'); background-position: center 80%;">
+          <div class="slide-overlay"></div>  <!-- <- оверлей -->
         <div class="slide-caption">
           <h3>Wohnungsauflösung</h3>
-          <p>Inkl. Endreinigung</p>
+          <p>Komplettservice inkl. Endreinigung</p>
         </div>
-      </a>
+      </div>
 
-      <a href="services/umzug-montage.html" class="slide">
-        <img src="img/slider/umzug.jpg" alt="Umzug & Möbelmontage" />
+      <div class="slide" style="background-image: url('img/slider/umzug.jpg'); background-position: center bottom;">
+          <div class="slide-overlay"></div>  <!-- <- оверлей -->
         <div class="slide-caption">
           <h3>Umzug & Möbelmontage</h3>
           <p>Transport & Aufbau</p>
         </div>
-      </a>
+      </div>
 
     </div>
   </div>
@@ -151,9 +154,8 @@
 </section>
 
 
-
   <!-- //////////////////////////////////uber uns//////////////////// -->
-</section>
+      <section id="ueber-mich">
         <h2>Über uns</h2>
         <p>
           Ich biete zuverlässige und sorgfältige Dienstleistungen rund um Haus
@@ -164,29 +166,29 @@
           Erfahrung in Deutschland, flexible Terminvereinbarung und faire
           Preise.
         </p>
-      </div>
     </section>
-    <section class="contact" id="kontakt">
-      <div class="container">
-        <h2>Kontakt</h2>
 
-          <p><strong>Andreas Immel</strong></p>
-        <p><strong>Kyrylo Maksimov</strong></p>
-       
+
+
+    <section class="contact" id="kontakt">
+           <h2>Kontakt</h2>
+      <div class="contact-grid">
+   
+   <div class="contact-names">
+      <p><strong>Andreas Immel</strong></p>
+      <p><strong>Kyrylo Maksimov</strong></p>
+    </div>
         
 
-        <p>📞 <a href="tel:+491234567890">+49 123 4567890</a></p>
-
-        <p>💬 <a href="https://wa.me/491234567890">WhatsApp schreiben</a></p>
-
-        <p>✉️ <a href="mailto:info@beispiel.de">info@beispiel.de</a></p>
-
-        <p class="hint">
-          <small>*Kein Elektro- oder Sanitärmeisterbetrieb</small>
-        </p>
+    <div class="contact-info">
+      <p>📞 <a href="tel:+491234567890">+49 123 4567890</a></p>
+      <p>💬 <a href="https://wa.me/491234567890">WhatsApp schreiben</a></p>
+      <p>✉️ <a href="mailto:info@beispiel.de">info@beispiel.de</a></p>
+      <p class="hint"><small>*Kein Elektro- oder Sanitärmeisterbetrieb</small></p>
+    </div>
       </div>
     </section>
-    <footer class="footer">
+    <footer class="footer footer-container" >
   <div class="footer-container">
 
     <!-- Logo / Name -->
@@ -219,10 +221,65 @@
   <div class="footer-bottom">
     <p>© 2026 Haus & Garten Service</p>
   </div>
+  <section class="contact-modal" id="contactModal">
+  <div class="contact-modal-overlay"></div>
+
+  <div class="contact-modal-content">
+    <button class="contact-modal-close">&times;</button>
+
+    <h2>Связаться с нами</h2>
+
+
+    <!-- форма связи -->
+
+    <form id="contactForm">
+
+      <div class="form-group">
+        <label for="name">Имя *</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Телефон *</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="service">Причина обращения *</label>
+        <select id="service" name="service" required>
+          <option value="">— Выберите —</option>
+          <option value="hausmeister">Hausmeisterservice</option>
+          <option value="garten">Gartenpflege</option>
+          <option value="umzug">Umzug & Montage</option>
+          <option value="wohnungsaufloesung">Wohnungsauflösung</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Комментарий (необязательно)</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+      </div>
+
+      <button type="submit" class="btn submit-btn">
+        Отправить
+      </button>
+
+      <p class="form-status" id="formStatus"></p>
+
+    </form>
+  </div>
+</section>
+
 </footer>
 
 
    
   </body>
    <script src="js/main.js"></script>
+   <script src="js/contact-form.js"></script>
 </html>

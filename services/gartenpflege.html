@@ -36,7 +36,9 @@
           Professionelle Pflege und Instandhaltung Ihres Gartens – zuverlässig
           und saisonal angepasst.
         </p>
-        <a href="#kontakt" class="btn">Kontakt aufnehmen</a>
+        <a href="javascript:void(0)" class="btn open-contact">
+          Kontakt aufnehmen
+        </a>
       </div>
     </header>
 
@@ -80,7 +82,9 @@
             </p>
 
             <div class="service-actions">
-              <a href="#kontakt" class="btn">Kontakt aufnehmen</a>
+              <a href="javascript:void(0)" class="btn open-contact">
+                Kontakt aufnehmen
+              </a>
               <button class="toggle-btn">Mehr erfahren</button>
             </div>
 
@@ -105,7 +109,9 @@
             </p>
 
             <div class="service-actions">
-              <a href="#kontakt" class="btn">Kontakt aufnehmen</a>
+              <a href="javascript:void(0)" class="btn open-contact">
+                Kontakt aufnehmen
+              </a>
               <button class="toggle-btn">Mehr erfahren</button>
             </div>
 
@@ -129,7 +135,9 @@
             </p>
 
             <div class="service-actions">
-              <a href="#kontakt" class="btn">Kontakt aufnehmen</a>
+              <a href="javascript:void(0)" class="btn open-contact">
+                Kontakt aufnehmen
+              </a>
               <button class="toggle-btn">Mehr erfahren</button>
             </div>
 
@@ -153,7 +161,9 @@
             </p>
 
             <div class="service-actions">
-              <a href="#kontakt" class="btn">Kontakt aufnehmen</a>
+              <a href="javascript:void(0)" class="btn open-contact">
+                Kontakt aufnehmen
+              </a>
               <button class="toggle-btn">Mehr erfahren</button>
             </div>
 
@@ -179,7 +189,9 @@
             </p>
 
             <div class="service-actions">
-              <a href="#kontakt" class="btn">Kontakt aufnehmen</a>
+              <a href="javascript:void(0)" class="btn open-contact">
+                Kontakt aufnehmen
+              </a>
               <button class="toggle-btn">Mehr erfahren</button>
             </div>
 
@@ -204,7 +216,9 @@
             </p>
 
             <div class="service-actions">
-              <a href="#kontakt" class="btn">Kontakt aufnehmen</a>
+              <a href="javascript:void(0)" class="btn open-contact">
+                Kontakt aufnehmen
+              </a>
               <button class="toggle-btn">Mehr erfahren</button>
             </div>
 
@@ -228,7 +242,9 @@
             </p>
 
             <div class="service-actions">
-              <a href="#kontakt" class="btn">Kontakt aufnehmen</a>
+              <a href="javascript:void(0)" class="btn open-contact">
+                Kontakt aufnehmen
+              </a>
               <button class="toggle-btn">Mehr erfahren</button>
             </div>
 
@@ -247,9 +263,54 @@
       <div class="container">
         <p>© Haus & Garten Service</p>
       </div>
+
+      <!-- форма  -->
+      <div id="contactModal" class="contact-modal">
+        <div class="contact-modal-overlay"></div>
+        <div class="contact-modal-content">
+          <button class="contact-modal-close">&times;</button>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Имя *</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Телефон *</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="service">Причина обращения *</label>
+              <select id="service" name="service" required>
+                <option value="">— Выберите —</option>
+                <option value="hausmeister">Hausmeisterservice</option>
+                <option value="garten">Gartenpflege</option>
+                <option value="umzug">Umzug & Montage</option>
+                <option value="wohnungsaufloesung">Wohnungsauflösung</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Комментарий (необязательно)</label>
+              <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="btn submit-btn">Отправить</button>
+
+            <p class="form-status" id="formStatus"></p>
+          </form>
+        </div>
+      </div>
     </footer>
 
     <script src="../js/main.js"></script>
     <script src="../js/service-toggle.js"></script>
+    <script src="../js/contact-form.js"></script>
   </body>
 </html>
