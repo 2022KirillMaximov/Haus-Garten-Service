@@ -25,7 +25,14 @@
         </ul>
       </div>
     </nav>
-
+<!-- Хлебные крошки -->
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Главная</a></li>
+    <li><a href="../index.html#leistungen">Leistungen</a></li>
+    <li>Gartenpflege</li>
+  </ol>
+</nav>
     <!-- HERO -->
     <header class="hero hero-gartenpflege">
       <div class="hero-overlay"></div>
@@ -74,7 +81,9 @@
         <!-- RASENPFLEGE -->
         <section class="service-bg rasenpflege" id="rasenpflege">
           <div class="service-overlay"></div>
-
+          <a href="rasenpflege.html" class="service-page-link">
+            Zur Leistungsseite →
+          </a>
           <div class="service-content container">
             <h2>Rasenpflege</h2>
             <p class="service-short">
@@ -101,7 +110,12 @@
         <!-- Gartenreinigung & Laubentfernung -->
         <section class="service-bg gartenreinigung" id="gartenreinigung">
           <div class="service-overlay"></div>
-
+          <a
+            href="gartenreinigung-laubentfernung.html"
+            class="service-page-link"
+          >
+            Zur Leistungsseite →
+          </a>
           <div class="service-content container">
             <h2>Gartenreinigung & Laubentfernung</h2>
             <p class="service-short">
@@ -127,7 +141,9 @@
         <!-- Bewässerung & Pflanzenpflege -->
         <section class="service-bg bewaesserung" id="bewaesserung">
           <div class="service-overlay"></div>
-
+          <a href="bewaesserung-pflanzenpflege.html" class="service-page-link">
+            Zur Leistungsseite →
+          </a>
           <div class="service-content container">
             <h2>Bewässerung & Pflanzenpflege</h2>
             <p class="service-short">
@@ -153,7 +169,9 @@
         <!-- Baumpflege & Entfernung -->
         <section class="service-bg baumpflege" id="baumpflege">
           <div class="service-overlay"></div>
-
+          <a href="baumpflege-entfernung.html" class="service-page-link">
+            Zur Leistungsseite →
+          </a>
           <div class="service-content container">
             <h2>Baumpflege & Entfernung</h2>
             <p class="service-short">
@@ -180,7 +198,9 @@
         <!-- Hecken- & Strauchschnitt -->
         <section class="service-bg hecken-schnitt" id="hecken-schnitt">
           <div class="service-overlay"></div>
-
+          <a href="hecken-strauchschnitt.html" class="service-page-link">
+            Zur Leistungsseite →
+          </a>
           <div class="service-content container">
             <h2>Hecken- & Strauchschnitt</h2>
             <p class="service-short">
@@ -208,7 +228,9 @@
         <!-- GARTENARBEITEN -->
         <section class="service-bg gartenarbeiten" id="gartenarbeiten">
           <div class="service-overlay"></div>
-
+          <a href="allgemeine-gartenarbeiten.html" class="service-page-link">
+            Zur Leistungsseite →
+          </a>
           <div class="service-content container">
             <h2>Allgemeine Gartenarbeiten</h2>
             <p class="service-short">
@@ -234,7 +256,9 @@
         <!-- WINTERDIENST -->
         <section class="service-bg winterdienst" id="winterdienst">
           <div class="service-overlay"></div>
-
+          <a href="winterdienst.html" class="service-page-link">
+            Zur Leistungsseite →
+          </a>
           <div class="service-content container">
             <h2>Winterdienst</h2>
             <p class="service-short">
@@ -259,55 +283,61 @@
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="container">
-        <p>© Haus & Garten Service</p>
-      </div>
+    <footer class="footer footer-container">
+      <div class="footer-container">
+        <!-- Logo / Name -->
+        <div class="footer-col">
+          <h3>Haus & Garten Service</h3>
+          <p>Zuverlässige Hilfe rund um Haus & Garten</p>
+        </div>
 
-      <!-- форма  -->
-      <div id="contactModal" class="contact-modal">
-        <div class="contact-modal-overlay"></div>
-        <div class="contact-modal-content">
-          <button class="contact-modal-close">&times;</button>
-          <form id="contactForm">
-            <div class="form-group">
-              <label for="name">Имя *</label>
-              <input type="text" id="name" name="name" required />
-            </div>
+        <!-- Navigation -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="../index.html#leistungen">Leistungen</a></li>
+            <li><a href="../index.html#ueber-mich">Über uns</a></li>
+            <li><a href="../index.html#kontakt">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+          </ul>
+        </div>
 
-            <div class="form-group">
-              <label for="phone">Телефон *</label>
-              <input type="tel" id="phone" name="phone" required />
-            </div>
-
-            <div class="form-group">
-              <label for="email">E-mail *</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-
-            <div class="form-group">
-              <label for="service">Причина обращения *</label>
-              <select id="service" name="service" required>
-                <option value="">— Выберите —</option>
-                <option value="hausmeister">Hausmeisterservice</option>
-                <option value="garten">Gartenpflege</option>
-                <option value="umzug">Umzug & Montage</option>
-                <option value="wohnungsaufloesung">Wohnungsauflösung</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="message">Комментарий (необязательно)</label>
-              <textarea id="message" name="message" rows="4"></textarea>
-            </div>
-
-            <button type="submit" class="btn submit-btn">Отправить</button>
-
-            <p class="form-status" id="formStatus"></p>
-          </form>
+        <!-- Contact -->
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <p>📞 <a href="tel:+491234567890">+49 123 4567890</a></p>
+          <p>💬 <a href="https://wa.me/491234567890">WhatsApp</a></p>
+          <p>✉️ <a href="mailto:info@beispiel.de">info@beispiel.de</a></p>
         </div>
       </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Haus & Garten Service</p>
+      </div>
     </footer>
+<!-- Модальное окно с формой (вне футера) -->
+<section class="contact-modal" id="contactModal"> 
+  <div class="contact-modal-overlay"></div>
+  <div class="contact-modal-content">
+    <button class="contact-modal-close">&times;</button>
+
+    <h2>Связаться с нами</h2>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Имя *</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Телефон *</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+</section>
 
     <script src="../js/main.js"></script>
     <script src="../js/service-toggle.js"></script>

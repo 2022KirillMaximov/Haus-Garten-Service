@@ -25,7 +25,14 @@
         </ul>
       </div>
     </nav>
-
+<!-- Хлебные крошки -->
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Главная</a></li>
+    <li><a href="../index.html#leistungen">Leistungen</a></li>
+    <li>Hausmeisterservice</li>
+  </ol>
+</nav>
     <!-- HERO -->
     <header class="hero hero-hausmeister">
       <div class="hero-overlay"></div>
@@ -70,21 +77,16 @@
       <section class="services-wrapper">
         <section class="service-bg reparaturen" id="reparaturen">
           <div class="service-overlay"></div>
-
+          <!-- КНОПКА СВЕРХУ СПРАВА -->
+          <a href="kleine-reparaturen.html" class="service-page-link">
+            Zur Leistungsseite →
+          </a>
           <div class="service-content container">
             <h2>Kleine Reparaturen</h2>
             <p class="service-short">
               Schnelle und zuverlässige Hilfe bei kleineren Reparaturen im
               Haushalt.
             </p>
-
-            <div class="service-actions">
-              <a href="javascript:void(0)" class="btn open-contact">
-                Kontakt aufnehmen
-              </a>
-              <button class="toggle-btn">Mehr erfahren</button>
-            </div>
-
             <div class="service-more">
               <p>
                 Ich übernehme kleinere Reparaturen im Innen- und Außenbereich –
@@ -93,11 +95,21 @@
               </p>
             </div>
           </div>
+          <!-- КНОПКИ СНИЗУ -->
+          <div class="service-actions">
+            <a href="javascript:void(0)" class="btn open-contact">
+              Kontakt aufnehmen
+            </a>
+            <button class="toggle-btn">Mehr erfahren</button>
+          </div>
         </section>
 
         <section class="service-bg malerarbeiten" id="malerarbeiten">
           <div class="service-overlay"></div>
-
+          <!-- КНОПКА СВЕРХУ СПРАВА -->
+          <a href="maler-tapezieren.html" class="service-page-link">
+            Zur Leistungsseite →
+          </a>
           <div class="service-content container">
             <h2>Malerarbeiten & Tapezieren</h2>
             <p class="service-short">
@@ -123,7 +135,10 @@
         </section>
         <section class="service-bg gartenpflege" id="gartenpflege">
           <div class="service-overlay"></div>
-
+          <!-- КНОПКА СВЕРХУ СПРАВА -->
+          <a href="garten-aussenanlagenpflege.html" class="service-page-link">
+            Zur Leistungsseite →
+          </a>
           <div class="service-content container">
             <h2>Garten- & Außenanlagenpflege</h2>
             <p class="service-short">
@@ -149,7 +164,13 @@
         </section>
         <section class="service-bg pflasterarbeiten" id="pflasterarbeiten">
           <div class="service-overlay"></div>
-
+          <!-- КНОПКА СВЕРХУ СПРАВА -->
+          <a
+            href="kleinpflaster-fliesenarbeiten.html"
+            class="service-page-link"
+          >
+            Zur Leistungsseite →
+          </a>
           <div class="service-content container">
             <h2>Kleinpflaster- & Fliesenarbeiten</h2>
             <p class="service-short">
@@ -174,7 +195,10 @@
         </section>
         <section class="service-bg wartung" id="wartung">
           <div class="service-overlay"></div>
-
+          <!-- КНОПКА СВЕРХУ СПРАВА -->
+          <a href="allgemeine-wartung-kontrolle.html" class="service-page-link">
+            Zur Leistungsseite →
+          </a>
           <div class="service-content container">
             <h2>Allgemeine Wartung & Kontrolle</h2>
             <p class="service-short">
@@ -201,7 +225,10 @@
 
         <section class="service-bg montage" id="montage">
           <div class="service-overlay"></div>
-
+          <!-- КНОПКА СВЕРХУ СПРАВА -->
+          <a href="montage-lampen-leuchten.html" class="service-page-link">
+            Zur Leistungsseite →
+          </a>
           <div class="service-content container">
             <h2>Montage von Lampen & Leuchten</h2>
             <p class="service-short">
@@ -227,7 +254,10 @@
 
         <section class="service-bg geraete" id="geraete">
           <div class="service-overlay"></div>
-
+          <!-- КНОПКА СВЕРХУ СПРАВА -->
+          <a href="anschluss-haushaltsgeraete.html" class="service-page-link">
+            Zur Leistungsseite →
+          </a>
           <div class="service-content container">
             <h2>Anschluss von Haushaltsgeräten</h2>
             <p class="service-short">
@@ -254,54 +284,62 @@
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="container">
-        <p>© Haus & Garten Service</p>
-      </div>
-      <!-- форма  -->
-      <div id="contactModal" class="contact-modal">
-        <div class="contact-modal-overlay"></div>
-        <div class="contact-modal-content">
-          <button class="contact-modal-close">&times;</button>
-          <form id="contactForm">
-            <div class="form-group">
-              <label for="name">Имя *</label>
-              <input type="text" id="name" name="name" required />
-            </div>
+    <footer class="footer footer-container">
+      <div class="footer-container">
+        <!-- Logo / Name -->
+        <div class="footer-col">
+          <h3>Haus & Garten Service</h3>
+          <p>Zuverlässige Hilfe rund um Haus & Garten</p>
+        </div>
 
-            <div class="form-group">
-              <label for="phone">Телефон *</label>
-              <input type="tel" id="phone" name="phone" required />
-            </div>
+        <!-- Navigation -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="../index.html#leistungen">Leistungen</a></li>
+            <li><a href="../index.html#ueber-mich">Über uns</a></li>
+            <li><a href="../index.html#kontakt">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+          </ul>
+        </div>
 
-            <div class="form-group">
-              <label for="email">E-mail *</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-
-            <div class="form-group">
-              <label for="service">Причина обращения *</label>
-              <select id="service" name="service" required>
-                <option value="">— Выберите —</option>
-                <option value="hausmeister">Hausmeisterservice</option>
-                <option value="garten">Gartenpflege</option>
-                <option value="umzug">Umzug & Montage</option>
-                <option value="wohnungsaufloesung">Wohnungsauflösung</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="message">Комментарий (необязательно)</label>
-              <textarea id="message" name="message" rows="4"></textarea>
-            </div>
-
-            <button type="submit" class="btn submit-btn">Отправить</button>
-
-            <p class="form-status" id="formStatus"></p>
-          </form>
+        <!-- Contact -->
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <p>📞 <a href="tel:+491234567890">+49 123 4567890</a></p>
+          <p>💬 <a href="https://wa.me/491234567890">WhatsApp</a></p>
+          <p>✉️ <a href="mailto:info@beispiel.de">info@beispiel.de</a></p>
         </div>
       </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Haus & Garten Service</p>
+      </div>
     </footer>
+
+    <!-- Модальное окно с формой (вне футера) -->
+<section class="contact-modal" id="contactModal"> 
+  <div class="contact-modal-overlay"></div>
+  <div class="contact-modal-content">
+    <button class="contact-modal-close">&times;</button>
+
+    <h2>Связаться с нами</h2>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Имя *</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Телефон *</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+</section>
 
     <script src="../js/main.js"></script>
     <script src="../js/service-toggle.js"></script>

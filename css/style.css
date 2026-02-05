@@ -161,7 +161,7 @@ ul {
 /* === HERO BASE === */
 .hero {
   position: relative;
-  min-height: 50vh;
+  min-height: 45vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -458,18 +458,18 @@ ul {
   inset: 0;
   background: rgba(0, 0, 0, 0.55);
   z-index: 1;
+  pointer-events: none;
 }
 
 /* Контейнер с контентом внутри секции */
 .service-content {
-  position: relative;
   max-width: 720px; /* ограничение ширины текста */
-  width: 90%; /* адаптивная ширина под экран */
-  margin: 0 auto; /* центрирование по горизонтали */
-  padding: 2rem 1rem; /* внутренние отступы */
+  width: 90%; /* адаптивная ширина */
+  margin: 0 auto; /* центр по горизонтали */
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem; /* расстояние между h2, p, кнопками */
+  gap: 1rem;
   z-index: 2; /* поверх оверлея */
 }
 
@@ -497,11 +497,36 @@ ul {
 }
 
 /* Кнопки действий */
+
+/* .service-content {
+  position: relative;
+} */
+
 .service-actions {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+
   display: flex;
-  flex-wrap: wrap; /* адаптивно на маленьких экранах */
-  gap: 1rem; /* расстояние между кнопками */
-  margin-top: 1rem;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 3;
+}
+
+.toggle-btn {
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.toggle-btn:hover {
+  background: rgba(0, 0, 0, 0.65);
 }
 
 /* Адаптивность для маленьких экранов */
@@ -525,6 +550,26 @@ ul {
   }
 }
 
+.service-page-link {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+
+  background: rgba(0, 0, 0, 0.45);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+
+  z-index: 3;
+  transition: background 0.3s;
+}
+
+.service-page-link:hover {
+  background: rgba(0, 0, 0, 0.65);
+}
 /* === 8. Footer === */
 /* ===== Футер на всю ширину ===== */
 .footer {
@@ -617,6 +662,92 @@ ul {
   background-image: url("../img/heroumzug.jpg");
 }
 /* ========================= */
+/* подсервис HERO товара  секция   */
+.service-hero {
+  position: relative;
+  min-height: 70vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.reparaturen-hero {
+  background-image: url("../img/hero/kleine-reparaturen.jpg");
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+  position: relative;
+  color: #fff;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* шахматные блоки услуг */
+.service-detail {
+  padding: 4rem 0;
+}
+
+.service-row {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.service-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-image {
+  flex: 1;
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.service-text {
+  flex: 1;
+}
+
+.service-text h2 {
+  margin-bottom: 1rem;
+}
+
+.service-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .service-row,
+  .service-row.reverse {
+    flex-direction: column;
+  }
+
+  .service-hero {
+    min-height: 60vh;
+  }
+}
+
 /* Секция Über uns на главной */
 
 #ueber-mich {
@@ -743,6 +874,7 @@ ul {
   }
 }
 /* === Service Link Cards === */
+
 .service-links-row {
   display: flex;
   flex-wrap: wrap;
@@ -808,12 +940,6 @@ ul {
   background-size: cover; /* картинка растягивается по всей секции */
   background-position: center; /* центрирование */
   background-repeat: no-repeat; /* чтобы не повторялась */
-}
-
-.service-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45); /* лёгкий темный оверлей */
 }
 
 /* SERVICE BACKGROUNDS */
@@ -942,4 +1068,32 @@ ul {
 
 .service-bg.einpackservice {
   background-image: url("../img/services/einpackservice.jpg");
+}
+
+/* для хлебных крошек */
+.breadcrumbs {
+  font-size: 0.9rem;
+  margin: 15px 0;
+}
+
+.breadcrumbs ol {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs li + li::before {
+  content: " / ";
+  padding: 0 5px;
+  color: #555;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #0077cc;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
 }
