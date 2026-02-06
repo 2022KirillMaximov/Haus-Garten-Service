@@ -120,8 +120,66 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">...</footer>
+     <!-- FOOTER -->
+   <footer class="footer footer-container">
+  <div class="footer-container">
+
+    <!-- Logo / Name -->
+    <div class="footer-col">
+      <h3>Haus & Garten Service</h3>
+      <p>Zuverlässige Hilfe rund um Haus & Garten</p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="../index.html#leistungen">Leistungen</a></li>
+        <li><a href="../index.html#ueber-mich">Über uns</a></li>
+        <li><a href="../index.html#kontakt">Kontakt</a></li>
+        <li><a href="../impressum.html">Impressum</a></li>
+         <li><a href="../datenschutzerklärung.html">Datenschutzerklärung</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h4>Kontakt</h4>
+      <p>📞 <a href="tel:+491234567890">+49 123 4567890</a></p>
+      <p>💬 <a href="https://wa.me/491234567890">WhatsApp</a></p>
+      <p>✉️ <a href="mailto:info@beispiel.de">info@beispiel.de</a></p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Haus & Garten Service</p>
+  </div>
+</footer>
+
+<!-- Модальное окно с формой (вне футера) -->
+<section class="contact-modal" id="contactModal"> 
+  <div class="contact-modal-overlay"></div>
+  <div class="contact-modal-content">
+    <button class="contact-modal-close">&times;</button>
+
+    <h2>Связаться с нами</h2>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Имя *</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Телефон *</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+</section>
 
     <script src="../js/main.js"></script>
     <script src="../js/contact-form.js"></script>
