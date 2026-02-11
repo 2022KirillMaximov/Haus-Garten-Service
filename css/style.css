@@ -9,7 +9,11 @@ html {
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
   line-height: 1.6;
   color: #1f2937;
   background-color: #f9fafb;
@@ -57,7 +61,9 @@ ul {
   border-radius: 1rem;
   padding: 1.2rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 .card:hover {
   transform: translateY(-4px);
@@ -249,7 +255,9 @@ ul {
   background: rgba(0, 0, 0, 0.4); /* прозрачный фон под текст */
   color: #fff;
   transform: translateY(100%); /* текст изначально скрыт ниже */
-  transition: transform 0.4s ease, background 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease;
 }
 
 .service-card:hover .service-card-content {
@@ -477,7 +485,9 @@ ul {
 .service-more {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, margin-top 0.4s ease;
+  transition:
+    max-height 0.4s ease,
+    margin-top 0.4s ease;
 }
 
 .service-bg.open .service-more {
@@ -665,15 +675,11 @@ ul {
 /* подсервис HERO товара  секция   */
 .service-hero {
   position: relative;
-  min-height: 70vh;
+  min-height: 40vh;
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
-}
-
-.reparaturen-hero {
-  background-image: url("../img/hero/kleine-reparaturen.jpg");
 }
 
 .hero-overlay {
@@ -698,6 +704,88 @@ ul {
   margin-bottom: 2rem;
 }
 
+/* бэкграунд на сервис Херо */
+.reparaturen-hero {
+  background-image: url("../img/services/reparaturen.jpg");
+}
+.maler-tapezieren-hero {
+  background-image: url("../img/services/malerarbeiten.jpg");
+}
+.ausen-hero {
+  background-image: url("../img/services/gartenpflege.jpg");
+}
+.kleinpflaster-hero {
+  background-image: url("../img/services/pflasterarbeiten.jpg");
+}
+.wartung-hero {
+  background-image: url("../img/services/wartung.webp");
+}
+.lampen-hero {
+  background-image: url("../img/services/montage.jpg");
+}
+.anschluss-hero {
+  background-image: url("../img/services/haushaltsgeraete.webp");
+}
+.rasenpflege-hero {
+  background-image: url("../img/services/rasenpflege.jpg");
+}
+.laubentfernung-hero {
+  background-image: url("../img/services/gartenreinigung.jpg");
+}
+.bewaesserung-hero {
+  background-image: url("../img/services/bewaesserung.jpg");
+}
+.baumpflege-hero {
+  background-image: url("../img/services/baumpflege.jpg");
+}
+.hecken-hero {
+  background-image: url("../img/services/hecken-schnitt.webp");
+}
+.gartenarbeiten-hero {
+  background-image: url("../img/services/gartenarbeiten.webp");
+}
+.winterdienst-hero {
+  background-image: url("../img/services/winterdienst.jpg");
+  background-position: bottom;
+}
+.entruemplelung-hero {
+  background-image: url("../img/services/aufloesung.jpg");
+  background-position: bottom;
+}
+.dachrinnenreinigung-hero {
+  background-image: url("../img/services/dachrinnenreinigung.jpg");
+}
+.dachreinigung-hero {
+  background-image: url("../img/services/dachreinigung.jpg");
+}
+.teppichreinigung-hero {
+  background-image: url("../img/services/bodenreinigung.jpg");
+}
+.treppenhaus-hero {
+  background-image: url("../img/services/treppenhausreinigung.jpeg");
+}
+.fassadereinigung-hero {
+  background-image: url("../img/services/fassadenreinigung.jpg");
+}
+.fensterreinigung-hero {
+  background-image: url("../img/services/fensterreinigung.webp");
+}
+.kellerreinigung-hero {
+  background-image: url("../img/services/kellerreinigung.jpg");
+}
+.sperrmuell-hero {
+  background-image: url("../img/services/spermull.jpg");
+}
+.moebelmontage-hero {
+  background-image: url("../img/services/moebelmontage.webp");
+}
+.transporthilfe-hero {
+  background-image: url("../img/services/transporthilfe.jpeg");
+  background-position: center 10%;
+}
+.einpackservice-hero {
+  background-image: url("../img/services/einpackservice.jpg");
+}
 /* шахматные блоки услуг */
 .service-detail {
   padding: 4rem 0;
@@ -719,8 +807,8 @@ ul {
 }
 
 .service-image img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 50vh;
   border-radius: 12px;
 }
 
@@ -888,8 +976,8 @@ ul {
   display: block;
   flex: 1 1 180px;
   min-width: 150px;
-  max-width: 220px;
-  height: 100px;
+  max-width: 175px;
+  height: 50px;
   background: #02a842;
   color: #fff;
   text-decoration: none;
@@ -901,7 +989,9 @@ ul {
   font-weight: 600;
   text-align: center;
   padding: 0.5rem;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
 .service-link-card::before {
