@@ -1187,3 +1187,106 @@ ul {
 .breadcrumbs a:hover {
   text-decoration: underline;
 }
+
+/* слайдер на сервисах */
+.service-block {
+  margin-bottom: 4rem;
+}
+
+.service-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.service-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.service-slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.service-slide {
+  flex: 0 0 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+.service-slide img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* шахматное расположение */
+.service-block:nth-child(even) .service-slide img {
+  order: 2;
+}
+
+.service-block:nth-child(even) .service-slide p {
+  order: 1;
+}
+
+.service-prev,
+.service-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.service-prev {
+  left: 10px;
+}
+.service-next {
+  right: 10px;
+}
+
+.service-slide-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.service-slide-text h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.service-slide-text p {
+  line-height: 1.6;
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .service-slide {
+    grid-template-columns: 1fr;
+  }
+}
+.service-slide-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 10px 20px;
+  background-color: #2c3e50; /* можешь заменить на свой фирменный цвет */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.service-slide-btn:hover {
+  background-color: #1a252f;
+  transform: translateY(-2px);
+}
+.service-slide-text .btn {
+  align-self: center;
+}

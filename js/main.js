@@ -45,3 +45,34 @@ if (path.includes("/services/")) {
     leistungenLink.classList.add("active");
   }
 }
+
+
+document.querySelectorAll('.service-slider').forEach(slider => {
+  const slides = slider.querySelector('.service-slides');
+  const slideItems = slider.querySelectorAll('.service-slide');
+  const prevBtn = slider.querySelector('.service-prev');
+  const nextBtn = slider.querySelector('.service-next');
+
+  let index = 0;
+
+  function updateSlider() {
+    slides.style.transform = `translateX(-${index * 100}%)`;
+
+    if (slideItems.length <= 1) {
+      prevBtn.style.display = 'none';
+      nextBtn.style.display = 'none';
+    }
+  }
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + slideItems.length) % slideItems.length;
+    updateSlider();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % slideItems.length;
+    updateSlider();
+  });
+
+  updateSlider();
+});
