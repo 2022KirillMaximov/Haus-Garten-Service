@@ -46,12 +46,16 @@ if (path.includes("/services/")) {
   }
 }
 
-
 document.querySelectorAll('.service-slider').forEach(slider => {
   const slides = slider.querySelector('.service-slides');
   const slideItems = slider.querySelectorAll('.service-slide');
   const prevBtn = slider.querySelector('.service-prev');
   const nextBtn = slider.querySelector('.service-next');
+
+  // 🔥 ВАЖНАЯ ПРОВЕРКА
+  if (!slides || !prevBtn || !nextBtn || slideItems.length === 0) {
+    return;
+  }
 
   let index = 0;
 

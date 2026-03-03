@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
@@ -16,18 +16,42 @@
     <nav class="nav">
       <div class="nav-container">
         <a href="index.html" class="logo">
-          <img src="img/logo/logo.svg" alt="Haus & Garten Service" />
-          Haus & Garten
+          <img src="img/logo/logo.svg" alt="Haus & Garten Service" />Haus &
+          Garten
         </a>
 
-        <ul class="nav-links">
-          <li><a href="index.html#leistungen">Leistungen</a></li>
-          <li><a href="index.html#ueber-mich">Über uns</a></li>
-          <li><a href="index.html#kontakt">Kontakt</a></li>
+        <button class="burger" id="burger" aria-label="Menü öffnen">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li class="nav-item dropdown">
+            <a href="#" class="dropdown-toggle"> Leistungen </a>
+
+            <ul class="dropdown-menu">
+              <li><a href="/services/gartenpflege.html">Gartenpflege</a></li>
+              <li>
+                <a href="/services/hausmeisterservice.html"
+                  >Hausmeisterservice</a
+                >
+              </li>
+              <li>
+                <a href="/services/umzug-montage.html">Umzug & Montage</a>
+              </li>
+              <li>
+                <a href="/services/wohnungsaufloesung.html"
+                  >Wohnungsauflösung</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li><a href="#ueber-mich">Über uns</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </div>
     </nav>
-
     <!-- Хлебные крошки -->
     <nav class="breadcrumbs" aria-label="Breadcrumb">
       <ol>
@@ -115,25 +139,33 @@
     </main>
 
     <!-- Футер (тот же, что и на главной, но без модалки внутри) -->
-    <footer class="footer footer-container">
+    <footer class="footer">
       <div class="footer-container">
+        <!-- Logo / Name -->
         <div class="footer-col">
           <h3>Haus & Garten Service</h3>
           <p>Zuverlässige Hilfe rund um Haus & Garten</p>
         </div>
 
+        <!-- Navigation -->
         <div class="footer-col">
           <h4>Navigation</h4>
           <ul>
-            <li><a href="index.html#leistungen">Leistungen</a></li>
-            <li><a href="index.html#ueber-mich">Über uns</a></li>
-            <li><a href="index.html#kontakt">Kontakt</a></li>
+            <li><a href="../index.html#leistungen">Leistungen</a></li>
+            <li><a href="../index.html#ueber-mich">Über uns</a></li>
+            <li><a href="../index.html#kontakt">Kontakt</a></li>
+            <li><a href="../impressum.html">Impressum</a></li>
+            <li>
+              <a href="../datenschutzerklärung.html">Datenschutzerklärung</a>
+            </li>
           </ul>
         </div>
 
+        <!-- Contact -->
         <div class="footer-col">
           <h4>Kontakt</h4>
           <p>📞 <a href="tel:+491234567890">+49 123 4567890</a></p>
+          <p>💬 <a href="https://wa.me/491234567890">WhatsApp</a></p>
           <p>✉️ <a href="mailto:info@beispiel.de">info@beispiel.de</a></p>
         </div>
       </div>

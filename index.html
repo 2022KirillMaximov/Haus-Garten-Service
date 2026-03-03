@@ -27,7 +27,18 @@
     </button>
 
     <ul class="nav-links" id="navLinks">
-      <li><a href="#leistungen">Leistungen</a></li>
+      <li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle">
+    Leistungen
+  </a>
+
+  <ul class="dropdown-menu">
+    <li><a href="services/gartenpflege.html">Gartenpflege</a></li>
+    <li><a href="services/hausmeisterservice.html">Hausmeisterservice</a></li>
+    <li><a href="services/umzug-montage.html">Umzug & Montage</a></li>
+    <li><a href="services/wohnungsaufloesung.html">Wohnungsauflösung</a></li>
+  </ul>
+</li>
       <li><a href="#ueber-mich">Über uns</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
     </ul>
@@ -40,7 +51,7 @@
   <div class="hero-overlay"></div>
 
   <div class="hero-content container">
-    <h1>Hausmeisterservice</h1>
+    <h1>Haus & Garten Service</h1>
     <p>
       Zuverlässige Hilfe für Reparaturen, Montagearbeiten und Instandhaltung
       rund um Ihre Immobilie.
@@ -61,69 +72,57 @@
     
   <div class="container">
   <h2>Leistungen</h2>
-<a href="services/hausmeisterservice.html" class="service-card">
-  <div
-    class="service-card-bg"
-    style="background-image: url('img/hausmeister.jpg')"
-  ></div>
-  <div class="service-card-content">
+<div class="services-grid">
+
+  <!-- Hausmeister -->
+  <div class="service-category">
+    <img src="img/hausmeister.jpg" alt="Hausmeisterservice">
     <h3>Hausmeisterservice</h3>
-    <p>Reparaturen & Instandhaltung rund ums Haus</p>
+    <a href="/services/hausmeisterservice.html" class="btn category-btn">
+      Zur Kategorie
+    </a>
   </div>
-</a>
 
-<a href="services/gartenpflege.html" class="service-card">
-  <div
-    class="service-card-bg"
-    style="background-image: url('img/gartenpflege.jpg')"
-  ></div>
-  <div class="service-card-content">
+  <!-- Gartenpflege -->
+  <div class="service-category">
+    <img src="img/gartenpflege.jpg" alt="Gartenpflege">
     <h3>Gartenpflege</h3>
-    <p>Rasenpflege, Gartenarbeiten & Winterdienst</p>
+    <a href="/services/gartenpflege.html" class="btn category-btn">
+      Zur Kategorie
+    </a>
   </div>
-</a>
 
-<a href="services/wohnungsaufloesung.html" class="service-card">
-  <div
-    class="service-card-bg"
-    style="background-image: url('img/wohnungsaufloesung.jpg')"
-  ></div>
-  <div class="service-card-content">
+  <!-- Wohnungsauflösung -->
+  <div class="service-category">
+    <img src="img/wohnungsaufloesung.jpg" alt="Wohnungsauflösung">
     <h3>Wohnungsauflösung</h3>
-    <p>Komplettservice inkl. Entsorgung & Endreinigung</p>
+    <a href="/services/wohnungsaufloesung.html" class="btn category-btn">
+      Zur Kategorie
+    </a>
   </div>
-</a>
 
-<a href="services/umzug-montage.html" class="service-card">
-  <div
-    class="service-card-bg"
-    style="background-image: url('img/umzughilfe.jpeg')"
-  ></div>
-  <div class="service-card-content">
+  <!-- Umzug -->
+  <div class="service-category">
+    <img src="img/umzughilfe.jpeg" alt="Umzug & Möbelmontage">
     <h3>Umzug & Möbelmontage</h3>
-    <p>Tragen, Transport & fachgerechter Aufbau</p>
+    <a href="/services/umzug-montage.html" class="btn category-btn">
+      Zur Kategorie
+    </a>
   </div>
-</a>
 
+</div>
 
   </div>
 
  <!--  СЛАЙДЕР ТУТ -->
+<!-- СЛАЙДЕР -->
 <section class="service-slider">
   <button class="slider-btn prev" aria-label="Zurück">‹</button>
 
   <div class="slider-viewport">
     <div class="slider-track">
 
-      <a href="services/hausmeisterservice.html" class="slide" style="background-image: url('img/slider/hausmeisterservice.jpg'); background-position: center bottom;">
-        <div class="slide-overlay"></div>
-        <div class="slide-caption">
-          <h3>Hausmeisterservice</h3>
-          <p>Reparaturen & Instandhaltung</p>
-        </div>
-      </a>
-
-      <a href="services/gartenpflege.html" class="slide" style="background-image: url('img/slider/gartenpflege.jpg'); background-position: center bottom;">
+      <a href="services/gartenpflege.html" class="slide slide-gartenpflege">
         <div class="slide-overlay"></div>
         <div class="slide-caption">
           <h3>Gartenpflege</h3>
@@ -131,7 +130,15 @@
         </div>
       </a>
 
-      <a href="services/wohnungsaufloesung.html" class="slide" style="background-image: url('img/slider/wohnungsauflosung.jpg'); background-position: center 80%;">
+      <a href="services/hausmeisterservice.html" class="slide slide-hausmeister">
+        <div class="slide-overlay"></div>
+        <div class="slide-caption">
+          <h3>Hausmeisterservice</h3>
+          <p>Reparaturen & Instandhaltung</p>
+        </div>
+      </a>
+
+      <a href="services/wohnungsaufloesung.html" class="slide slide-wohnungsaufloesung">
         <div class="slide-overlay"></div>
         <div class="slide-caption">
           <h3>Wohnungsauflösung</h3>
@@ -139,7 +146,7 @@
         </div>
       </a>
 
-      <a href="services/umzug-montage.html" class="slide" style="background-image: url('img/slider/umzug.jpg'); background-position: center bottom;">
+      <a href="services/umzug-montage.html" class="slide slide-umzug">
         <div class="slide-overlay"></div>
         <div class="slide-caption">
           <h3>Umzug & Möbelmontage</h3>
@@ -152,7 +159,6 @@
 
   <button class="slider-btn next" aria-label="Weiter">›</button>
 </section>
-
 
 
   <!-- //////////////////////////////////uber uns//////////////////// -->
@@ -191,7 +197,7 @@
     </section>
 
     
-    <footer class="footer footer-container" >
+    <footer class="footer " >
   <div class="footer-container">
 
     <!-- Logo / Name -->
