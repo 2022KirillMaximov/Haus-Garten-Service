@@ -347,22 +347,22 @@ ul {
     margin: 0;
   }
   .slide-gartenpflege {
-    background-image: url("/img/slider/gartenpflege.jpg");
+    background-image: url("../img/slider/gartenpflege.jpg");
     background-position: center;
   }
 
   .slide-hausmeister {
-    background-image: url("/img/slider/hausmeisterservice.jpg");
+    background-image: url("../img/slider/hausmeisterservice.jpg");
     background-position: center;
   }
 
   .slide-wohnungsaufloesung {
-    background-image: url("/img/slider/wohnungsauflosung.jpg");
+    background-image: url("../img/slider/wohnungsauflosung.jpg");
     background-position: center;
   }
 
   .slide-umzug {
-    background-image: url("/img/slider/umzug.jpg");
+    background-image: url("../img/slider/umzug.jpg");
     background-position: center;
   }
 }
@@ -414,6 +414,13 @@ ul {
   flex-direction: column;
   gap: 1rem;
   z-index: 2; /* поверх оверлея */
+}
+/* Поднимаем только заголовок и параграф внутри service-content */
+.service-content > h2,
+.service-content > p {
+  position: relative;
+  top: -30px; /* смещаем вверх */
+  z-index: 2; /* чтобы над оверлеем */
 }
 
 /* Скрытый блок с дополнительной информацией */
@@ -473,28 +480,6 @@ ul {
 .toggle-btn:hover {
   background: rgba(0, 0, 0, 0.65);
 }
-
-/* Адаптивность для маленьких экранов */
-@media (max-width: 768px) {
-  .service-content {
-    width: 95%; /* почти весь экран на мобильных */
-    padding: 1.5rem;
-  }
-
-  .service-actions {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-
-  .service-bg {
-    min-height: 25vh;
-  }
-
-  .service-bg.open {
-    min-height: 60vh;
-  }
-}
-
 .service-page-link {
   position: absolute;
   top: 1.5rem;
@@ -515,6 +500,75 @@ ul {
 .service-page-link:hover {
   background: rgba(0, 0, 0, 0.65);
 }
+
+/* Адаптивность для маленьких экранов */
+/* === Мобильная адаптация service-bg === */
+@media (max-width: 768px) {
+  /* Убираем возможность раскрытия блока */
+  .service-bg.open {
+    min-height: 25vh; /* компактная высота */
+  }
+
+  /* Скрываем кнопку "Mehr erfahren" */
+  .service-bg .toggle-btn {
+    display: none;
+  }
+
+  /* Скрываем дополнительный текст */
+  .service-bg .service-more {
+    display: none;
+  }
+
+  /* Контент и кнопки */
+  .service-actions {
+    position: static; /* убираем absolute */
+    width: 100%; /* ширина на весь экран */
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem; /* отступ сверху */
+    justify-content: flex-start;
+  }
+  .service-bg .service-actions .btn.open-contact {
+    width: auto; /* или 90%, если хочешь почти на всю ширину */
+  }
+  /* Кнопка "Kontakt aufnehmen" под текстом */
+  .service-actions .btn.open-contact {
+    width: 100%; /* на всю ширину */
+    text-align: center;
+  }
+
+  /* Фон изображений становится обычным, без растягивания при раскрытии */
+  .service-bg {
+    background-size: cover;
+    background-position: center;
+    min-height: 25vh; /* базовая высота */
+  }
+  /* Поднимаем кнопку чуть выше и делаем заметнее */
+  .service-page-link {
+    top: 1rem; /* поднять выше, уменьшить отступ сверху */
+    right: 1rem; /* чуть сдвинуть от края */
+    background-color: #22c55e; /* яркий зелёный фон */
+    color: #fff; /* белый текст */
+    font-weight: 700;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem; /* чуть больше на мобиле */
+    border-radius: 999px;
+    z-index: 5; /* поверх всего */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* немного тени для выделения */
+    transition: all 0.3s ease;
+  }
+
+  .service-page-link:hover {
+    background-color: #16a34a; /* темнее на hover */
+    transform: translateY(-2px);
+  }
+  /* Опускаем контент внутри секции service-bg */
+  .service-bg .service-content {
+    margin-top: 3rem; /* увеличиваем отступ сверху */
+    padding-bottom: 1rem; /* немного снизу для дыхания */
+  }
+}
+
 /* === 8. Footer === */
 /* ===== Футер на всю ширину ===== */
 .footer {
