@@ -303,22 +303,22 @@ ul {
   }
 }
 .slide-gartenpflege {
-  background-image: url("img/slider/gartenpflege.jpg");
+  background-image: url("../img/slider/gartenpflege.jpg");
   background-position: center bottom;
 }
 
 .slide-hausmeister {
-  background-image: url("img/slider/hausmeisterservice.jpg");
+  background-image: url("../img/slider/hausmeisterservice.jpg");
   background-position: center bottom;
 }
 
 .slide-wohnungsaufloesung {
-  background-image: url("img/slider/wohnungsauflosung.jpg");
+  background-image: url("../img/slider/wohnungsauflosung.jpg");
   background-position: center 80%;
 }
 
 .slide-umzug {
-  background-image: url("img/slider/umzug.jpg");
+  background-image: url("../img/slider/umzug.jpg");
   background-position: center bottom;
 }
 @media (max-width: 768px) {
