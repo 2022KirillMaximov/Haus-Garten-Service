@@ -1474,7 +1474,7 @@ h2 a:hover {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
   gap: 30px;
   justify-content: center;
   align-items: stretch; /* растягивает все карточки в ряду */
