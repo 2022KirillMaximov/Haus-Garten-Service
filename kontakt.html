@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kontakt - Haus & Garten Service</title>
 
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- Стили -->
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <!-- NAVIGATION -->
     <nav class="nav">
       <div class="nav-container">
+        <!-- Лого и навигация -->
         <a href="../index.html" class="logo">
-          <img src="./img/logo/logo.svg" alt="Haus & Garten Service" />Haus &
+          <img src="../img/logo/logo.svg" alt="Haus & Garten Service" />Haus &
           Garten
         </a>
 
@@ -22,12 +24,18 @@
 
         <ul class="nav-links" id="navLinks">
           <li><a href="../leistungen.html">Leistungen</a></li>
-          <li><a href="../index.html#ueber-mich">Über uns</a></li>
+          <li><a href="../ueber-uns.html">Über uns</a></li>
           <li><a href="kontakt.html" class="active">Kontakt</a></li>
         </ul>
       </div>
     </nav>
-
+    <!-- Хлебные крошки -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">Startseite </a></li>
+        <li>Kontakt</li>
+      </ol>
+    </nav>
     <!-- HERO SECTION -->
     <header class="hero hero-index">
       <div class="hero-overlay"></div>
@@ -105,8 +113,8 @@
         <div class="footer-col">
           <h4>Navigation</h4>
           <ul>
-            <li><a href="../index.html#leistungen">Leistungen</a></li>
-            <li><a href="../index.html#ueber-mich">Über uns</a></li>
+            <li><a href="../leistungen.html">Leistungen</a></li>
+            <li><a href="../ueber-uns.html">Über uns</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
             <li><a href="../impressum.html">Impressum</a></li>
             <li>
@@ -128,7 +136,8 @@
       </div>
     </footer>
     <button id="scrollTopBtn" class="scroll-top-btn">↑</button>
+    <!-- Скрипты в конце body -->
+    <script src="../js/main.js"></script>
+    <script src="../js/contact-form.js"></script>
   </body>
-  <script src="./js/main.js"></script>
-  <script src="./js/contact-form.js"></script>
 </html>
