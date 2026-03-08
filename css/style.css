@@ -303,22 +303,22 @@ ul {
   }
 }
 .slide-gartenpflege {
-  background-image: url("/img/slider/gartenpflege.jpg");
+  background-image: url("img/slider/gartenpflege.jpg");
   background-position: center bottom;
 }
 
 .slide-hausmeister {
-  background-image: url("/img/slider/hausmeisterservice.jpg");
+  background-image: url("img/slider/hausmeisterservice.jpg");
   background-position: center bottom;
 }
 
 .slide-wohnungsaufloesung {
-  background-image: url("/img/slider/wohnungsauflosung.jpg");
+  background-image: url("img/slider/wohnungsauflosung.jpg");
   background-position: center 80%;
 }
 
 .slide-umzug {
-  background-image: url("/img/slider/umzug.jpg");
+  background-image: url("img/slider/umzug.jpg");
   background-position: center bottom;
 }
 @media (max-width: 768px) {
@@ -1329,21 +1329,30 @@ ul {
   line-height: 1.6;
   text-align: left;
 }
+/* =========================
+   Базовые стили кнопок
+========================= */
 
-/* кнопка внутри слайда (десктоп) */
+/* Десктопная кнопка по умолчанию видна */
 .service-slide-text .btn.desktop-btn {
   display: inline-block;
   margin-top: 1rem;
+}
+
+/* Мобильная кнопка по умолчанию скрыта */
+.service-slider .btn.mobile-btn {
+  display: none;
 }
 
 /* =========================
    Мобильная версия
 ========================= */
 @media (max-width: 768px) {
+  /* Слайды под мобильный экран */
   .service-slide {
     height: auto; /* вместо 100vh */
     display: block;
-    position: relative; /* для кнопки, как было */
+    position: relative; /* для кнопки внутри */
     margin-bottom: 2rem; /* отступ между слайдами */
   }
 
@@ -1352,7 +1361,7 @@ ul {
     height: 100%;
     object-fit: cover;
     display: block;
-    z-index: 1; /* изображение ниже всего */
+    z-index: 1;
   }
 
   .service-slide-text {
@@ -1370,7 +1379,12 @@ ul {
     z-index: 2;
   }
 
-  /* кнопка фиксированная снизу (мобильная) */
+  /* Десктопная кнопка внутри слайда скрыта на мобильной */
+  .service-slide-text .btn.desktop-btn {
+    display: none;
+  }
+
+  /* Мобильная кнопка фиксирована снизу */
   .service-slider .btn.mobile-btn {
     display: block;
     position: absolute;
@@ -1390,11 +1404,6 @@ ul {
   .service-slider .btn.mobile-btn:hover {
     background-color: #1a252f;
     transform: translateX(-50%) translateY(-2px);
-  }
-
-  /* прячем кнопки внутри слайда на мобильной версии */
-  .service-slide-text .btn.desktop-btn {
-    display: none;
   }
 }
 /* ================= LEISTUNGEN KATALOG ================= */
