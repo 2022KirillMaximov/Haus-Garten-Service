@@ -1435,6 +1435,12 @@ h2 a:hover {
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
   }
+
+  .service-slide-text p {
+    height: 150px; /* важно: не max-height */
+    overflow-y: auto;
+    display: block;
+  }
   .service-slide img {
     width: 100%;
     height: 100%;
