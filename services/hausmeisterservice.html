@@ -436,7 +436,14 @@
 
             <div class="form-group">
               <label for="phone">Telefon *</label>
-              <input type="tel" id="phone" name="phone" required />
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+49 151 23456789"
+                pattern="^\+49[0-9 ]{8,15}$"
+                required
+              />
             </div>
 
             <div class="form-group">
