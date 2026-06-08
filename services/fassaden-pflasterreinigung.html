@@ -22,8 +22,8 @@
 
         <ul class="nav-links" id="navLinks">
           <li><a href="../leistungen.html">Leistungen</a></li>
-          <li><a href="../index.html#ueber-mich">Über uns</a></li>
-          <li><a href="../index.html#kontakt">Kontakt</a></li>
+          <li><a href="../ueber-uns.html">Über uns</a></li>
+          <li><a href="../kontakt.html">Kontakt</a></li>
         </ul>
       </div>
     </nav>
@@ -67,8 +67,10 @@
               <div class="service-slide-text">
                 <h3>Reinigung von Fassadenoberflächen (sichtbare Flächen)</h3>
                 <p>
-                  Gründliche Reinigung von Fassadenoberflächen für saubere und
-                  gepflegte Außenwände.
+                  Fachgerechte Reinigung von sichtbaren Fassadenoberflächen. Wir
+                  entfernen Schmutz, Staub und Ablagerungen schonend und sorgen
+                  für ein gepflegtes, sauberes Erscheinungsbild sowie den
+                  Werterhalt der Gebäudehülle.
                 </p>
                 <a
                   href="javascript:void(0)"
@@ -88,8 +90,10 @@
                   Entfernung von Schmutz, Staub und leichten Verschmutzungen
                 </h3>
                 <p>
-                  Effiziente Beseitigung von Staub, Schmutz und leichten
-                  Ablagerungen auf Fassaden.
+                  Fachgerechte Reinigung zur Entfernung von Schmutz, Staub und
+                  leichten Verschmutzungen auf Oberflächen. Wir sorgen für ein
+                  sauberes, gepflegtes Erscheinungsbild und erhalten den
+                  Werterhalt der behandelten Flächen.
                 </p>
                 <a
                   href="javascript:void(0)"
@@ -109,8 +113,10 @@
                   Reinigung von Hauswänden und Außenputz mit Wasser und Bürste
                 </h3>
                 <p>
-                  Sanfte Reinigung von Außenwänden und Putz mit Wasser und
-                  Bürste für optimale Pflege.
+                  Schonende und gründliche Reinigung von Hauswänden und
+                  Außenputz mit Wasser und Bürste. Wir entfernen Verschmutzungen
+                  mechanisch und sorgen für ein sauberes, gepflegtes
+                  Erscheinungsbild der Fassadenflächen.
                 </p>
                 <a
                   href="javascript:void(0)"
@@ -135,10 +141,13 @@
       <div class="footer-container">
         <!-- Logo / Name -->
         <div class="footer-col">
-          <h3>Haus & Garten Service</h3>
+          <h3>
+            <a href="../index.html" class="footer-logo-link">
+              Haus & Garten Service
+            </a>
+          </h3>
           <p>Zuverlässige Hilfe rund um Haus & Garten</p>
         </div>
-
         <!-- Navigation -->
         <div class="footer-col">
           <h4>Navigation</h4>
@@ -148,7 +157,7 @@
             <li><a href="../kontakt.html">Kontakt</a></li>
             <li><a href="../impressum.html">Impressum</a></li>
             <li>
-              <a href="datenschutzerklärung.html">Datenschutzerklärung</a>
+              <a href="../datenschutzerklärung.html">Datenschutzerklärung</a>
             </li>
           </ul>
         </div>
@@ -156,9 +165,21 @@
         <!-- Contact -->
         <div class="footer-col">
           <h4>Kontakt</h4>
-          <p>📞 <a href="tel:+491234567890">+49 123 4567890</a></p>
-          <p>💬 <a href="https://wa.me/491234567890">WhatsApp</a></p>
-          <p>✉️ <a href="mailto:info@beispiel.de">info@beispiel.de</a></p>
+
+          <p>👤 <strong>Kyrylo Maksimov</strong></p>
+          <p>📞 <a href="tel:+491771907103">+49 177 1907103</a></p>
+
+          <p>👤 <strong>Andreas Immel</strong></p>
+          <p>📞 <a href="tel:+491729682752">+49 172 9682752</a></p>
+
+          <p>
+            ✉️
+            <a href="mailto:service-hausgarten@gmx.de"
+              >service-hausgarten@gmx.de</a
+            >
+          </p>
+
+          <p><small>*Kein Elektro- oder Sanitärmeisterbetrieb</small></p>
         </div>
       </div>
 
@@ -171,30 +192,30 @@
         <div class="contact-modal-content">
           <button class="contact-modal-close">&times;</button>
 
-          <h2>Связаться с нами</h2>
+          <h2 class="contact-form-title">Kontaktieren Sie uns !</h2>
 
           <!-- форма связи -->
 
           <form id="contactForm">
             <div class="form-group">
-              <label for="name">Имя *</label>
+              <label for="name">Name *</label>
               <input type="text" id="name" name="name" required />
             </div>
 
             <div class="form-group">
-              <label for="phone">Телефон *</label>
+              <label for="phone">Telefon *</label>
               <input type="tel" id="phone" name="phone" required />
             </div>
 
             <div class="form-group">
-              <label for="email">E-mail *</label>
+              <label for="email">E-Mail *</label>
               <input type="email" id="email" name="email" required />
             </div>
 
             <div class="form-group">
-              <label for="service">Причина обращения *</label>
+              <label for="service">Anfragegrund *</label>
               <select id="service" name="service" required>
-                <option value="">— Выберите —</option>
+                <option value="">— Bitte auswählen —</option>
                 <option value="hausmeister">Hausmeisterservice</option>
                 <option value="garten">Gartenpflege</option>
                 <option value="umzug">Umzug & Montage</option>
@@ -203,11 +224,11 @@
             </div>
 
             <div class="form-group">
-              <label for="message">Комментарий (необязательно)</label>
+              <label for="message">Kommentar (optional)</label>
               <textarea id="message" name="message" rows="4"></textarea>
             </div>
 
-            <button type="submit" class="btn submit-btn">Отправить</button>
+            <button type="submit" class="btn submit-btn">Senden</button>
 
             <p class="form-status" id="formStatus"></p>
           </form>
